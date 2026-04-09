@@ -114,11 +114,24 @@
     "formTitle": "Join via the form",
     "formIntro": "Alternatively, you can join the waiting list through the form below."
   },
+  "ContactPage": {
+    "title": "Contact us",
+    "intro": "Same details as Join us — boat or shore, when you’re free, plus your message."
+  },
   "Contact": {
     "title": "Join the waiting list",
     "description": "Leave your details and message. We’ll get back to you with the next available spots.",
+    "titleContact": "Send a message",
+    "descriptionContact": "Questions or next spot — we reply with what fits.",
     "name": "Name",
     "email": "Email",
+    "tripPreference": "Boat or shore?",
+    "tripPreferencePlaceholder": "Choose one",
+    "tripBoat": "Boat fishing",
+    "tripShore": "Shore fishing",
+    "tripEither": "Either / not sure",
+    "availability": "When are you free?",
+    "availabilityPlaceholder": "e.g. weekends in May, or specific dates",
     "message": "Message",
     "submit": "Send",
     "sending": "Sending…",
@@ -127,6 +140,8 @@
     "validation": {
       "nameRequired": "Name is required",
       "emailInvalid": "Enter a valid email address",
+      "tripPreferenceRequired": "Choose boat or shore",
+      "availabilityRequired": "Say when you’re free",
       "messageRequired": "Message is required"
     }
   },

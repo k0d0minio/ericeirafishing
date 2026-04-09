@@ -114,11 +114,24 @@
     "formTitle": "S’inscrire via le formulaire",
     "formIntro": "Vous pouvez aussi rejoindre la liste d’attente via le formulaire ci-dessous."
   },
+  "ContactPage": {
+    "title": "Nous contacter",
+    "intro": "Mêmes infos que « Nous rejoindre » — bateau ou bord, vos disponibilités, et votre message."
+  },
   "Contact": {
     "title": "Liste d’attente",
     "description": "Laissez vos coordonnées et un message. Nous vous répondrons avec les prochaines places disponibles.",
+    "titleContact": "Envoyer un message",
+    "descriptionContact": "Question ou prochaine place — nous répondons avec ce qui convient.",
     "name": "Nom",
     "email": "E-mail",
+    "tripPreference": "Bateau ou bord ?",
+    "tripPreferencePlaceholder": "Choisir",
+    "tripBoat": "Pêche en bateau",
+    "tripShore": "Pêche à pied",
+    "tripEither": "Les deux / pas sûr",
+    "availability": "Quand êtes-vous disponible ?",
+    "availabilityPlaceholder": "ex. week-ends en mai, ou dates précises",
     "message": "Message",
     "submit": "Envoyer",
     "sending": "Envoi en cours…",
@@ -127,6 +140,8 @@
     "validation": {
       "nameRequired": "Le nom est obligatoire",
       "emailInvalid": "Saisissez une adresse e-mail valide",
+      "tripPreferenceRequired": "Choisissez bateau ou bord",
+      "availabilityRequired": "Indiquez vos disponibilités",
       "messageRequired": "Le message est obligatoire"
     }
   },

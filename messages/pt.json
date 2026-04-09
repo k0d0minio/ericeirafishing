@@ -114,11 +114,24 @@
     "formTitle": "Junta-te pelo formulário",
     "formIntro": "Alternativamente, podes entrar na lista de espera através do formulário abaixo."
   },
+  "ContactPage": {
+    "title": "Contacta-nos",
+    "intro": "Mesmos dados que em Junta-te — barco ou costa, quando estás disponível, e a tua mensagem."
+  },
   "Contact": {
     "title": "Lista de espera",
     "description": "Deixa os teus dados e a tua mensagem. Respondemos com as próximas vagas disponíveis.",
+    "titleContact": "Enviar mensagem",
+    "descriptionContact": "Dúvida ou próxima vaga — respondemos com o que encaixa.",
     "name": "Nome",
     "email": "E-mail",
+    "tripPreference": "Barco ou costa?",
+    "tripPreferencePlaceholder": "Escolhe uma opção",
+    "tripBoat": "Pesca de barco",
+    "tripShore": "Pesca de costa",
+    "tripEither": "Ambos / não tenho a certeza",
+    "availability": "Quando estás disponível?",
+    "availabilityPlaceholder": "ex. fins de semana em maio, ou datas concretas",
     "message": "Mensagem",
     "submit": "Enviar",
     "sending": "A enviar…",
@@ -127,6 +140,8 @@
     "validation": {
       "nameRequired": "O nome é obrigatório",
       "emailInvalid": "Introduza um endereço de e-mail válido",
+      "tripPreferenceRequired": "Escolhe barco ou costa",
+      "availabilityRequired": "Diz quando estás disponível",
       "messageRequired": "A mensagem é obrigatória"
     }
   },

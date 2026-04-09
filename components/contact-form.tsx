@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 
 import { submitContactAction } from "@/lib/actions/contact";
+import { tripPreferenceValues } from "@/lib/contact-schema";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -18,6 +19,11 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { cn } from "@/lib/utils";
+
+const selectClassName = cn(
+  "h-8 w-full min-w-0 rounded-lg border border-input bg-transparent px-2.5 py-1 text-base transition-colors outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40",
+);
 
 function buildContactSchema(t: (key: string) => string) {
   return z.object({
@@ -28,6 +34,19 @@ function buildContactSchema(t: (key: string) => string) {
       .min(1, t("validation.emailInvalid"))
       .email(t("validation.emailInvalid"))
       .max(320),
+    tripPreference: z
+      .string()
+      .min(1, t("validation.tripPreferenceRequired"))
+      .pipe(
+        z.enum(tripPreferenceValues, {
+          error: t("validation.tripPreferenceRequired"),
+        }),
+      ),
+    availability: z
+      .string()
+      .trim()
+      .min(1, t("validation.availabilityRequired"))
+      .max(2000),
     message: z
       .string()
       .trim()
@@ -36,9 +55,13 @@ function buildContactSchema(t: (key: string) => string) {
   });
 }
 
-type ContactFormValues = z.infer<ReturnType<typeof buildContactSchema>>;
+type ContactFormValues = z.input<ReturnType<typeof buildContactSchema>>;
 
-export function ContactForm() {
+type ContactFormProps = {
+  intent?: "join" | "contact";
+};
+
+export function ContactForm({ intent = "join" }: ContactFormProps) {
   const t = useTranslations("Contact");
   const schema = buildContactSchema(t);
   const [serverError, setServerError] = useState(false);
@@ -50,6 +73,8 @@ export function ContactForm() {
     defaultValues: {
       name: "",
       email: "",
+      tripPreference: "",
+      availability: "",
       message: "",
     },
   });
@@ -70,11 +95,15 @@ export function ContactForm() {
     });
   }
 
+  const cardTitle = intent === "contact" ? t("titleContact") : t("title");
+  const cardDescription =
+    intent === "contact" ? t("descriptionContact") : t("description");
+
   if (success) {
     return (
       <Card className="w-full max-w-lg">
         <CardHeader>
-          <CardTitle>{t("title")}</CardTitle>
+          <CardTitle>{cardTitle}</CardTitle>
           <CardDescription>{t("success")}</CardDescription>
         </CardHeader>
       </Card>
@@ -84,8 +113,8 @@ export function ContactForm() {
   return (
     <Card className="w-full max-w-lg">
       <CardHeader>
-        <CardTitle>{t("title")}</CardTitle>
-        <CardDescription>{t("description")}</CardDescription>
+        <CardTitle>{cardTitle}</CardTitle>
+        <CardDescription>{cardDescription}</CardDescription>
       </CardHeader>
       <CardContent>
         <form
@@ -119,6 +148,40 @@ export function ContactForm() {
             {form.formState.errors.email ? (
               <p className="text-destructive text-sm" role="alert">
                 {form.formState.errors.email.message}
+              </p>
+            ) : null}
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="contact-trip">{t("tripPreference")}</Label>
+            <select
+              id="contact-trip"
+              aria-invalid={!!form.formState.errors.tripPreference}
+              className={selectClassName}
+              {...form.register("tripPreference")}
+            >
+              <option value="">{t("tripPreferencePlaceholder")}</option>
+              <option value="boat">{t("tripBoat")}</option>
+              <option value="shore">{t("tripShore")}</option>
+              <option value="either">{t("tripEither")}</option>
+            </select>
+            {form.formState.errors.tripPreference ? (
+              <p className="text-destructive text-sm" role="alert">
+                {form.formState.errors.tripPreference.message}
+              </p>
+            ) : null}
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="contact-availability">{t("availability")}</Label>
+            <Input
+              id="contact-availability"
+              autoComplete="off"
+              aria-invalid={!!form.formState.errors.availability}
+              placeholder={t("availabilityPlaceholder")}
+              {...form.register("availability")}
+            />
+            {form.formState.errors.availability ? (
+              <p className="text-destructive text-sm" role="alert">
+                {form.formState.errors.availability.message}
               </p>
             ) : null}
           </div>
