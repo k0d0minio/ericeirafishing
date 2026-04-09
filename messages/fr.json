@@ -1,0 +1,40 @@
+{
+  "Metadata": {
+    "siteTitle": "Site",
+    "homeTitle": "Accueil",
+    "homeDescription": "Bienvenue.",
+    "contactTitle": "Contact",
+    "contactDescription": "Nous contacter."
+  },
+  "Nav": {
+    "home": "Accueil",
+    "contact": "Contact",
+    "language": "Langue",
+    "openMenu": "Ouvrir le menu"
+  },
+  "Home": {
+    "title": "Bienvenue",
+    "description": "Ceci est une page provisoire. Le contenu sera ajouté plus tard."
+  },
+  "Contact": {
+    "title": "Contact",
+    "description": "Envoyez un message via le formulaire ci-dessous.",
+    "name": "Nom",
+    "email": "E-mail",
+    "message": "Message",
+    "submit": "Envoyer",
+    "sending": "Envoi en cours…",
+    "success": "Merci. Votre message a bien été reçu.",
+    "serverError": "Une erreur s'est produite. Veuillez réessayer.",
+    "validation": {
+      "nameRequired": "Le nom est obligatoire",
+      "emailInvalid": "Saisissez une adresse e-mail valide",
+      "messageRequired": "Le message est obligatoire"
+    }
+  },
+  "NotFound": {
+    "title": "Page introuvable",
+    "description": "La page que vous recherchez n'existe pas.",
+    "homeLink": "Retour à l'accueil"
+  }
+}

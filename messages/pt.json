@@ -1,0 +1,40 @@
+{
+  "Metadata": {
+    "siteTitle": "Site",
+    "homeTitle": "Início",
+    "homeDescription": "Bem-vindo.",
+    "contactTitle": "Contacto",
+    "contactDescription": "Fale connosco."
+  },
+  "Nav": {
+    "home": "Início",
+    "contact": "Contacto",
+    "language": "Idioma",
+    "openMenu": "Abrir menu"
+  },
+  "Home": {
+    "title": "Bem-vindo",
+    "description": "Esta é uma página temporária. O conteúdo será adicionado mais tarde."
+  },
+  "Contact": {
+    "title": "Contacto",
+    "description": "Envie uma mensagem através do formulário abaixo.",
+    "name": "Nome",
+    "email": "E-mail",
+    "message": "Mensagem",
+    "submit": "Enviar",
+    "sending": "A enviar…",
+    "success": "Obrigado. A sua mensagem foi recebida.",
+    "serverError": "Algo correu mal. Tente novamente.",
+    "validation": {
+      "nameRequired": "O nome é obrigatório",
+      "emailInvalid": "Introduza um endereço de e-mail válido",
+      "messageRequired": "A mensagem é obrigatória"
+    }
+  },
+  "NotFound": {
+    "title": "Página não encontrada",
+    "description": "A página que procura não existe.",
+    "homeLink": "Voltar ao início"
+  }
+}

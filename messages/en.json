@@ -1,0 +1,40 @@
+{
+  "Metadata": {
+    "siteTitle": "Site",
+    "homeTitle": "Home",
+    "homeDescription": "Welcome.",
+    "contactTitle": "Contact",
+    "contactDescription": "Get in touch."
+  },
+  "Nav": {
+    "home": "Home",
+    "contact": "Contact",
+    "language": "Language",
+    "openMenu": "Open menu"
+  },
+  "Home": {
+    "title": "Welcome",
+    "description": "This is a placeholder page. Content will be added later."
+  },
+  "Contact": {
+    "title": "Contact",
+    "description": "Send a message using the form below.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Send",
+    "sending": "Sending…",
+    "success": "Thank you. Your message has been received.",
+    "serverError": "Something went wrong. Please try again.",
+    "validation": {
+      "nameRequired": "Name is required",
+      "emailInvalid": "Enter a valid email address",
+      "messageRequired": "Message is required"
+    }
+  },
+  "NotFound": {
+    "title": "Page not found",
+    "description": "The page you are looking for does not exist.",
+    "homeLink": "Back to home"
+  }
+}
