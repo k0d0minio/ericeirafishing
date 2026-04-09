@@ -11,32 +11,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import fishesImg from "@/lib/fishes.jpg";
 import joaoImg from "@/lib/joao-juma.jpeg";
 import mestreAlbanoImg from "@/lib/mestre-albano.jpg";
-import mestreAlbano2Img from "@/lib/mestre-albano-2.jpg";
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
-
-const GALLERY_ITEMS = [
-  {
-    titleKey: "gallery.previousTrips" as const,
-    altKey: "gallery.altPreviousTrips" as const,
-    src: mestreAlbano2Img,
-  },
-  {
-    titleKey: "gallery.ourFish" as const,
-    altKey: "gallery.altOurFish" as const,
-    src: fishesImg,
-  },
-  {
-    titleKey: "gallery.boatAndCrew" as const,
-    altKey: "gallery.altBoatAndCrew" as const,
-    src: joaoImg,
-  },
-];
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
@@ -142,30 +122,23 @@ export default async function HomePage({ params }: Props) {
         <p className="text-primary font-medium">{t("about.welcome")}</p>
       </FadeIn>
 
-      <section className="mx-auto w-full max-w-3xl space-y-6 px-4 py-10">
-        <h2 className="sr-only">Gallery</h2>
-        <div className="grid gap-3 sm:grid-cols-3">
-          {GALLERY_ITEMS.map((item, index) => (
-            <FadeIn key={item.titleKey} delay={index * 0.07}>
-              <Card className="h-full overflow-hidden" size="sm">
-                <div className="relative aspect-[5/3] w-full">
-                  <Image
-                    src={item.src}
-                    alt={t(item.altKey)}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 280px"
-                  />
-                </div>
-                <CardHeader className="py-3">
-                  <CardTitle className="text-sm font-medium">
-                    {t(item.titleKey)}
-                  </CardTitle>
-                </CardHeader>
-              </Card>
-            </FadeIn>
-          ))}
-        </div>
+      <section
+        id="gallery"
+        className="scroll-mt-14 mx-auto w-full max-w-3xl space-y-6 px-4 py-10"
+      >
+        <FadeIn className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="space-y-2">
+            <h2 className="text-xl font-semibold tracking-tight">
+              {t("galleryTeaser.title")}
+            </h2>
+            <p className="text-muted-foreground max-w-md text-base leading-relaxed">
+              {t("galleryTeaser.body")}
+            </p>
+          </div>
+          <Button size="lg" variant="outline" asChild className="shrink-0">
+            <Link href="/gallery">{t("galleryTeaser.cta")}</Link>
+          </Button>
+        </FadeIn>
       </section>
 
       <section id="team" className="scroll-mt-14 border-t py-16">
@@ -182,53 +155,57 @@ export default async function HomePage({ params }: Props) {
           </FadeIn>
           <div className="grid gap-6 sm:grid-cols-2">
             <FadeIn delay={0.06}>
-              <Card className="overflow-hidden">
-                <div className="relative aspect-[4/5] w-full">
-                  <Image
-                    src={mestreAlbanoImg}
-                    alt={t("team.albano.portraitAlt")}
-                    fill
-                    className="object-cover object-top"
-                    sizes="(max-width: 640px) 100vw, 400px"
-                  />
+              <Card className="overflow-hidden pt-8">
+                <div className="flex flex-col items-center px-6 text-center">
+                  <div className="bg-muted relative size-36 shrink-0 overflow-hidden rounded-full sm:size-44">
+                    <Image
+                      src={mestreAlbanoImg}
+                      alt={t("team.albano.portraitAlt")}
+                      fill
+                      className="object-cover object-[center_15%]"
+                      sizes="176px"
+                    />
+                  </div>
+                  <CardHeader className="w-full px-0 pb-2">
+                    <CardTitle className="text-lg">
+                      {t("team.albano.name")}
+                    </CardTitle>
+                    <CardDescription className="text-foreground/80 font-medium">
+                      {t("team.albano.role")}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="px-0 pt-0 pb-8">
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {t("team.albano.bio")}
+                    </p>
+                  </CardContent>
                 </div>
-                <CardHeader>
-                  <CardTitle className="text-lg">
-                    {t("team.albano.name")}
-                  </CardTitle>
-                  <CardDescription className="text-foreground/80 font-medium">
-                    {t("team.albano.role")}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {t("team.albano.bio")}
-                  </p>
-                </CardContent>
               </Card>
             </FadeIn>
             <FadeIn delay={0.12}>
-              <Card className="overflow-hidden">
-                <div className="relative aspect-[4/5] w-full">
-                  <Image
-                    src={joaoImg}
-                    alt={t("team.joao.portraitAlt")}
-                    fill
-                    className="object-cover object-top"
-                    sizes="(max-width: 640px) 100vw, 400px"
-                  />
+              <Card className="overflow-hidden pt-8">
+                <div className="flex flex-col items-center px-6 text-center">
+                  <div className="bg-muted relative size-36 shrink-0 overflow-hidden rounded-full sm:size-44">
+                    <Image
+                      src={joaoImg}
+                      alt={t("team.joao.portraitAlt")}
+                      fill
+                      className="object-cover object-[center_20%]"
+                      sizes="176px"
+                    />
+                  </div>
+                  <CardHeader className="w-full px-0 pb-2">
+                    <CardTitle className="text-lg">{t("team.joao.name")}</CardTitle>
+                    <CardDescription className="text-foreground/80 font-medium">
+                      {t("team.joao.role")}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="px-0 pt-0 pb-8">
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {t("team.joao.bio")}
+                    </p>
+                  </CardContent>
                 </div>
-                <CardHeader>
-                  <CardTitle className="text-lg">{t("team.joao.name")}</CardTitle>
-                  <CardDescription className="text-foreground/80 font-medium">
-                    {t("team.joao.role")}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {t("team.joao.bio")}
-                  </p>
-                </CardContent>
               </Card>
             </FadeIn>
           </div>

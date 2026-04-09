@@ -6,11 +6,14 @@
     "joinUsTitle": "Join the crew — Ericeira Fishing",
     "joinUsDescription": "Trip times, what’s included, and join the waiting list for the next spot. WhatsApp or form.",
     "contactTitle": "Join the waiting list — Ericeira Fishing",
-    "contactDescription": "Tell us you’d like the next available spot on a trip with Ericeira Fishing."
+    "contactDescription": "Tell us you’d like the next available spot on a trip with Ericeira Fishing.",
+    "galleryTitle": "Gallery — Ericeira Fishing",
+    "galleryDescription": "Photos and videos from boat and shore fishing trips in Ericeira."
   },
   "Nav": {
     "home": "Home",
     "joinUs": "Join us",
+    "gallery": "Gallery",
     "services": "Services",
     "team": "Team",
     "language": "Language",
@@ -49,14 +52,10 @@
         "body": "Our shore fishing experience is a relaxed half-day for everyone, including children and beginners. With an experienced local fisherman you’ll fish from Ericeira’s beautiful coastline while learning simple techniques and tips for local species. All equipment and required licences are included. Small groups and a friendly atmosphere make it a great way to discover fishing, breathe the sea air, and spend quality time by the ocean."
       }
     },
-    "gallery": {
-      "previousTrips": "Previous trips",
-      "ourFish": "Our fish",
-      "boatAndCrew": "Boat and crew",
-      "placeholder": "Photos coming soon",
-      "altPreviousTrips": "Guests fishing on a previous boat trip along the Ericeira coast",
-      "altOurFish": "Fresh catch from an Ericeira Fishing trip",
-      "altBoatAndCrew": "Skipper João Juma on the boat with fishing gear"
+    "galleryTeaser": {
+      "title": "Gallery",
+      "body": "Photos and video from our trips—out on the water, the catch, and life in the harbour.",
+      "cta": "View gallery"
     },
     "team": {
       "eyebrow": "Meet us",
@@ -79,6 +78,17 @@
       "body": "Small-group trips fill up quickly. Add your name and we’ll let you know as soon as the next dates open.",
       "button": "Join us"
     }
+  },
+  "Gallery": {
+    "title": "Gallery",
+    "intro": "Moments from boat days, shore sessions, and our skippers along the Ericeira coast.",
+    "photosTitle": "Photos",
+    "videosTitle": "Videos",
+    "videosBody": "Trip highlights and reels will land here soon. Follow us on social for clips in the meantime.",
+    "altTrips": "Guests fishing on a boat trip along the Ericeira coast",
+    "altFish": "Fresh catch from an Ericeira Fishing trip",
+    "altCrew": "Skipper João Juma on the boat with fishing gear",
+    "altCaptain": "Mestre Albano, boat captain, on the water"
   },
   "JoinUs": {
     "title": "Join the crew",

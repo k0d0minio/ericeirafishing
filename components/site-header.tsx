@@ -36,6 +36,7 @@ export function SiteHeader() {
   const pathname = usePathname();
   const locale = useLocale() as AppLocale;
   const isHome = pathname === "/";
+  const isGallery = pathname === "/gallery";
   const [langOpen, setLangOpen] = useState(false);
 
   return (
@@ -82,6 +83,15 @@ export function SiteHeader() {
               </Link>
             </>
           )}
+          <Link
+            href="/gallery"
+            className={cn(
+              "hover:text-foreground/80 text-foreground/90 transition-colors",
+              isGallery && "text-foreground",
+            )}
+          >
+            {t("gallery")}
+          </Link>
           <Link
             href="/join-us"
             className={cn(

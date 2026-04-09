@@ -6,11 +6,14 @@
     "joinUsTitle": "Junta-te à equipa — Ericeira Fishing",
     "joinUsDescription": "Horários, o que está incluído e lista de espera para a próxima vaga. WhatsApp ou formulário.",
     "contactTitle": "Lista de espera — Ericeira Fishing",
-    "contactDescription": "Diz-nos que queres a próxima vaga numa saída com a Ericeira Fishing."
+    "contactDescription": "Diz-nos que queres a próxima vaga numa saída com a Ericeira Fishing.",
+    "galleryTitle": "Galeria — Ericeira Fishing",
+    "galleryDescription": "Fotos e vídeos de saídas de barco e de costa na Ericeira."
   },
   "Nav": {
     "home": "Início",
     "joinUs": "Junta-te",
+    "gallery": "Galeria",
     "services": "Serviços",
     "team": "Equipa",
     "language": "Idioma",
@@ -49,14 +52,10 @@
         "body": "A nossa pesca de costa é uma meia-manhã ou meio-dia descontraído para toda a gente, incluindo crianças e principiantes. Com um pescador local experiente, pescas na bela costa da Ericeira enquanto aprendes técnicas simples e dicas para espécies locais. Todo o equipamento e licenças estão incluídos. Grupos pequenos e um ambiente familiar tornam isto uma ótima forma de descobrir a pesca, respirar ar do mar e passar um bom momento junto ao oceano."
       }
     },
-    "gallery": {
-      "previousTrips": "Saídas anteriores",
-      "ourFish": "Os nossos peixes",
-      "boatAndCrew": "Barco e equipa",
-      "placeholder": "Fotos em breve",
-      "altPreviousTrips": "Convidados a pescar numa saída de barco anterior na costa da Ericeira",
-      "altOurFish": "Peixe fresco de uma saída da Ericeira Fishing",
-      "altBoatAndCrew": "O skipper João Juma no barco com o material de pesca"
+    "galleryTeaser": {
+      "title": "Galeria",
+      "body": "Fotos e vídeo das nossas saídas—no mar, as capturas e a vida do porto.",
+      "cta": "Ver galeria"
     },
     "team": {
       "eyebrow": "Conhece-nos",
@@ -79,6 +78,17 @@
       "body": "As saídas em grupo pequeno enchem depressa. Deixa o teu nome e avisamos logo que houver novas datas.",
       "button": "Junta-te"
     }
+  },
+  "Gallery": {
+    "title": "Galeria",
+    "intro": "Momentos de dias de barco, sessões de costa e skippers ao longo da costa da Ericeira.",
+    "photosTitle": "Fotos",
+    "videosTitle": "Vídeos",
+    "videosBody": "Destaques e reels em vídeo chegam aqui em breve. Segue-nos nas redes enquanto isso.",
+    "altTrips": "Convidados a pescar numa saída de barco na costa da Ericeira",
+    "altFish": "Peixe fresco de uma saída da Ericeira Fishing",
+    "altCrew": "O skipper João Juma no barco com o material de pesca",
+    "altCaptain": "Mestre Albano, capitão do barco, no mar"
   },
   "JoinUs": {
     "title": "Junta-te à equipa",

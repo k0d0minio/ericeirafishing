@@ -13,7 +13,7 @@ export function FlagGb({ className, title }: FlagProps) {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 60 30"
-      className={cn("size-5 shrink-0 rounded-sm border border-black/10 shadow-xs", className)}
+      className={cn("size-5 shrink-0 overflow-hidden rounded-sm", className)}
       aria-hidden={title ? undefined : true}
       role={title ? "img" : undefined}
       aria-label={title}
@@ -37,7 +37,7 @@ export function FlagFr({ className, title }: FlagProps) {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 3 2"
-      className={cn("size-5 shrink-0 rounded-sm border border-black/10 shadow-xs", className)}
+      className={cn("size-5 shrink-0 overflow-hidden rounded-sm", className)}
       aria-hidden={title ? undefined : true}
       role={title ? "img" : undefined}
       aria-label={title}
@@ -54,7 +54,7 @@ export function FlagPt({ className, title }: FlagProps) {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 30 20"
-      className={cn("size-5 shrink-0 rounded-sm border border-black/10 shadow-xs", className)}
+      className={cn("size-5 shrink-0 overflow-hidden rounded-sm", className)}
       aria-hidden={title ? undefined : true}
       role={title ? "img" : undefined}
       aria-label={title}

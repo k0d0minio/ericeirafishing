@@ -6,11 +6,14 @@
     "joinUsTitle": "Rejoignez l’équipe — Ericeira Fishing",
     "joinUsDescription": "Horaires, inclus / non inclus et liste d’attente pour la prochaine place. WhatsApp ou formulaire.",
     "contactTitle": "Liste d’attente — Ericeira Fishing",
-    "contactDescription": "Indiquez que vous souhaitez une place sur la prochaine sortie avec Ericeira Fishing."
+    "contactDescription": "Indiquez que vous souhaitez une place sur la prochaine sortie avec Ericeira Fishing.",
+    "galleryTitle": "Galerie — Ericeira Fishing",
+    "galleryDescription": "Photos et vidéos des sorties en bateau et du bord à Ericeira."
   },
   "Nav": {
     "home": "Accueil",
     "joinUs": "Nous rejoindre",
+    "gallery": "Galerie",
     "services": "Services",
     "team": "Équipe",
     "language": "Langue",
@@ -49,14 +52,10 @@
         "body": "Notre pêche du bord est une demi-journée détendue pour tous, y compris les enfants et les débutants. Avec un pêcheur local expérimenté, vous pêchez depuis le magnifique littoral d’Ericeira en apprenant des techniques simples et des astuces pour les espèces locales. Matériel et licences inclus. Petits groupes et ambiance chaleureuse : idéal pour découvrir la pêche, respirer l’air marin et passer un bon moment face à l’océan."
       }
     },
-    "gallery": {
-      "previousTrips": "Sorties précédentes",
-      "ourFish": "Nos poissons",
-      "boatAndCrew": "Bateau et équipage",
-      "placeholder": "Photos bientôt",
-      "altPreviousTrips": "Pêche en bateau lors d’une sortie précédente sur la côte d’Ericeira",
-      "altOurFish": "Poisson frais pêché lors d’une sortie Ericeira Fishing",
-      "altBoatAndCrew": "Le skipper João Juma à bord avec le matériel de pêche"
+    "galleryTeaser": {
+      "title": "Galerie",
+      "body": "Photos et vidéos de nos sorties—en mer, les prises et la vie du port.",
+      "cta": "Voir la galerie"
     },
     "team": {
       "eyebrow": "Nous rencontrer",
@@ -79,6 +78,17 @@
       "body": "Les sorties en petit groupe se remplissent vite. Laissez votre nom : nous vous prévenons dès que de nouvelles dates s’ouvrent.",
       "button": "Nous rejoindre"
     }
+  },
+  "Gallery": {
+    "title": "Galerie",
+    "intro": "Instants de journées en mer, sessions du bord et skippers le long de la côte d’Ericeira.",
+    "photosTitle": "Photos",
+    "videosTitle": "Vidéos",
+    "videosBody": "Les temps forts et reels arriveront bientôt ici. Suivez-nous sur les réseaux en attendant.",
+    "altTrips": "Pêche en bateau lors d’une sortie sur la côte d’Ericeira",
+    "altFish": "Poisson frais pêché lors d’une sortie Ericeira Fishing",
+    "altCrew": "Le skipper João Juma à bord avec le matériel de pêche",
+    "altCaptain": "Mestre Albano, capitaine, en mer"
   },
   "JoinUs": {
     "title": "Rejoignez l’équipage",
