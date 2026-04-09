@@ -1,8 +1,8 @@
 {
   "Metadata": {
     "siteTitle": "Ericeira Fishing",
-    "homeTitle": "Ericeira Fishing — Authentic fishing experiences",
-    "homeDescription": "Connect with Ericeira’s roots. Boat and shore fishing with local skippers, small groups, and the real spirit of the coast.",
+    "homeTitle": "Ericeira Fishing — Local boat & shore fishing",
+    "homeDescription": "Full-day boat trips and half-day shore fishing with local skippers. Small groups, tackle and licences included.",
     "joinUsTitle": "Join the crew — Ericeira Fishing",
     "joinUsDescription": "Trip times, what’s included, and join the waiting list for the next spot. WhatsApp or form.",
     "contactTitle": "Join the waiting list — Ericeira Fishing",
@@ -26,11 +26,13 @@
       "title": "And bring dinner home",
       "learnMore": "Learn more"
     },
-    "lead": "Experience the real Ericeira, get to know the local fishermen and learn to fish by boat or from the shore.",
+    "lead": "Full-day boat fishing and relaxed half-day shore sessions with local skippers—small groups, all gear and licences included.",
     "about": {
+      "storyTitle": "Our story",
+      "experienceTitle": "What makes it different",
       "p1": "Ericeira Fishing was born from a deep connection to the sea and the fishing traditions of Ericeira.",
-      "p2": "We offer an authentic local experience on one of Portugal’s most iconic coastlines. Hear the fishermen’s stories, learn their techniques, and let yourself be guided by people who know these waters inside out. Whether you’re a beginner or an experienced angler, our experiences are designed to be relaxed, safe, and unforgettable.",
-      "p3": "This is not mass tourism. It’s an authentic way to be in first-hand contact with the last generation of fishermen in Ericeira. We focus on small groups, quality equipment, and a friendly atmosphere where everyone feels welcome on board.",
+      "p2": "We offer a hands-on local outing on one of Portugal’s most iconic coastlines. Hear the fishermen’s stories, learn their techniques, and let yourself be guided by people who know these waters inside out. Whether you’re a beginner or an experienced angler, our trips are relaxed, safe, and memorable.",
+      "p3": "This is not mass tourism. You’re out with crews who grew up on this harbour—families who’ve worked the same boats and marks for decades. We keep groups small, use quality equipment, and aim for a friendly atmosphere where everyone feels welcome on board.",
       "p4": "More than just fishing — it’s an experience: the ocean, the coastline, the thrill of the catch, and the unique spirit of Ericeira.",
       "welcome": "Welcome aboard"
     },
@@ -38,7 +40,9 @@
       "title": "Our services",
       "boat": {
         "title": "Meet the fishermen — boat fishing",
-        "body": "Every trip is a full-day experience designed to be simple and worry-free. It includes a guided tour around the port, meeting local fishermen, and fishing with an experienced local skipper and crew — all tackle and required fishing licences included. We keep groups small for comfort, safety, and a more personal day on the water. All safety equipment is provided, so you can relax and enjoy a full day fishing along the Ericeira coast."
+        "body1": "Every trip is a full day on the water, kept simple and worry-free. You get a guided look around the port, time with local fishermen, and fishing with an experienced skipper and crew.",
+        "body2": "All tackle and required licences are included. Groups stay small for comfort, safety, and a more personal day at sea.",
+        "body3": "Safety gear is provided so you can relax and fish the Ericeira coast from morning to late afternoon."
       },
       "shore": {
         "title": "Shore fishing",
@@ -66,13 +70,13 @@
       "joao": {
         "name": "João Juma",
         "role": "Skipper",
-        "bio": "Organiser and fishing enthusiast, João brings the community together to learn the art of bringing dinner home.",
+        "bio": "Ericeira-born, João runs each trip end to end—from the first message to the last cast—so guests fish with people who live this coast every day.",
         "portraitAlt": "Portrait of João Juma, skipper"
       }
     },
     "cta": {
       "title": "Join the waiting list",
-      "body": "Our trips are carefully planned for a limited number of people. Join the waiting list to hear when the next spot is available.",
+      "body": "Small-group trips fill up quickly. Add your name and we’ll let you know as soon as the next dates open.",
       "button": "Join us"
     }
   },
@@ -85,7 +89,7 @@
       "Bait",
       "Daily licence",
       "Vest",
-      "Good fun",
+      "Good company",
       "Bringing your own fish home"
     ],
     "notIncludedTitle": "Not included",
@@ -93,7 +97,7 @@
       "Personal risk insurance",
       "Drinks and food"
     ],
-    "waitingList": "Our trips are carefully planned for a limited number of people. Join the waiting list to know when the next spot is available.",
+    "waitingList": "Tell us boat or shore and when you’re free. We’ll reply with what fits and add you to the list for the next opening.",
     "reachUs": "You can reach us on WhatsApp or join our community online.",
     "whatsappLabel": "Message us on WhatsApp",
     "community": "Follow us and stay close to the community for news and trip updates.",

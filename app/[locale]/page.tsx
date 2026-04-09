@@ -77,16 +77,6 @@ export default async function HomePage({ params }: Props) {
         </FadeIn>
       </section>
 
-      <FadeIn className="mx-auto w-full max-w-3xl space-y-8 px-4 py-16">
-        <div className="space-y-6 text-base leading-relaxed">
-          <p>{t("about.p1")}</p>
-          <p className="text-muted-foreground">{t("about.p2")}</p>
-          <p className="text-muted-foreground">{t("about.p3")}</p>
-          <p className="text-muted-foreground">{t("about.p4")}</p>
-        </div>
-        <p className="text-primary font-medium">{t("about.welcome")}</p>
-      </FadeIn>
-
       <section
         id="services"
         className="scroll-mt-14 border-t bg-muted/20 py-16"
@@ -106,8 +96,10 @@ export default async function HomePage({ params }: Props) {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base leading-relaxed">
-                    {t("services.boat.body")}
+                  <CardDescription className="space-y-3 text-base leading-relaxed">
+                    <p>{t("services.boat.body1")}</p>
+                    <p>{t("services.boat.body2")}</p>
+                    <p>{t("services.boat.body3")}</p>
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -130,23 +122,45 @@ export default async function HomePage({ params }: Props) {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-3xl space-y-8 px-4 py-16">
+      <FadeIn className="mx-auto w-full max-w-3xl space-y-10 px-4 py-16">
+        <div className="space-y-4">
+          <h2 className="text-xl font-semibold tracking-tight">
+            {t("about.storyTitle")}
+          </h2>
+          <p className="text-base leading-relaxed">{t("about.p1")}</p>
+        </div>
+        <div className="space-y-4">
+          <h2 className="text-xl font-semibold tracking-tight">
+            {t("about.experienceTitle")}
+          </h2>
+          <div className="space-y-6 text-base leading-relaxed">
+            <p className="text-muted-foreground">{t("about.p2")}</p>
+            <p className="text-muted-foreground">{t("about.p3")}</p>
+            <p className="text-muted-foreground">{t("about.p4")}</p>
+          </div>
+        </div>
+        <p className="text-primary font-medium">{t("about.welcome")}</p>
+      </FadeIn>
+
+      <section className="mx-auto w-full max-w-3xl space-y-6 px-4 py-10">
         <h2 className="sr-only">Gallery</h2>
-        <div className="grid gap-4 sm:grid-cols-3">
+        <div className="grid gap-3 sm:grid-cols-3">
           {GALLERY_ITEMS.map((item, index) => (
             <FadeIn key={item.titleKey} delay={index * 0.07}>
-              <Card className="h-full overflow-hidden">
-                <div className="relative aspect-video w-full">
+              <Card className="h-full overflow-hidden" size="sm">
+                <div className="relative aspect-[5/3] w-full">
                   <Image
                     src={item.src}
                     alt={t(item.altKey)}
                     fill
                     className="object-cover"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 320px"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 280px"
                   />
                 </div>
-                <CardHeader className="pb-4">
-                  <CardTitle className="text-base">{t(item.titleKey)}</CardTitle>
+                <CardHeader className="py-3">
+                  <CardTitle className="text-sm font-medium">
+                    {t(item.titleKey)}
+                  </CardTitle>
                 </CardHeader>
               </Card>
             </FadeIn>

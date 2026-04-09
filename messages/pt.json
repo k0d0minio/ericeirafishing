@@ -1,8 +1,8 @@
 {
   "Metadata": {
     "siteTitle": "Ericeira Fishing",
-    "homeTitle": "Ericeira Fishing — Experiências de pesca autênticas",
-    "homeDescription": "Ligue-se às raízes da Ericeira. Pesca de barco e de costa com locais, grupos pequenos e o verdadeiro espírito do mar.",
+    "homeTitle": "Ericeira Fishing — Pesca de barco e costa com locais",
+    "homeDescription": "Saídas de dia completo de barco e meias jornadas de pesca de costa com skippers locais. Grupos pequenos, material e licenças incluídos.",
     "joinUsTitle": "Junta-te à equipa — Ericeira Fishing",
     "joinUsDescription": "Horários, o que está incluído e lista de espera para a próxima vaga. WhatsApp ou formulário.",
     "contactTitle": "Lista de espera — Ericeira Fishing",
@@ -26,11 +26,13 @@
       "title": "E leva o jantar para casa",
       "learnMore": "Saber mais"
     },
-    "lead": "Vive a Ericeira de verdade, conhece os pescadores locais e aprende a pescar de barco ou de costa.",
+    "lead": "Pesca de barco em dia completo e meias jornadas descontraídas na costa com skippers locais—grupos pequenos, todo o material e licenças incluídos.",
     "about": {
+      "storyTitle": "A nossa história",
+      "experienceTitle": "O que torna isto diferente",
       "p1": "A Ericeira Fishing nasceu de uma ligação profunda ao mar e às tradições de pesca da Ericeira.",
-      "p2": "Oferecemos uma experiência local autêntica numa das costas mais icónicas de Portugal. Ouve as histórias dos pescadores, aprende as técnicas deles e deixa-te guiar por quem conhece estas águas por dentro. Quer sejas principiante ou experiente, as nossas experiências são desenhadas para serem descontraídas, seguras e inesquecíveis.",
-      "p3": "Isto não é turismo de massas. É uma forma autêntica de teres contacto direto com a última geração de pescadores da Ericeira. Apostamos em grupos pequenos, equipamento de qualidade e um ambiente acolhedor em que toda a gente se sente bem a bordo.",
+      "p2": "Propomos um dia vivido de perto com quem trabalha este mar, numa das costas mais icónicas de Portugal. Ouve as histórias dos pescadores, aprende as técnicas deles e deixa-te guiar por quem conhece estas águas por dentro. Quer sejas principiante ou experiente, as nossas saídas são descontraídas, seguras e memoráveis.",
+      "p3": "Isto não é turismo de massas. Saís com tripulações que cresceram neste porto—famílias que há décadas trabalham os mesmos barcos e os mesmos pontos. Apostamos em grupos pequenos, equipamento de qualidade e um ambiente acolhedor em que toda a gente se sente bem a bordo.",
       "p4": "Mais do que pescar — é uma experiência: o oceano, a costa, a emoção do peixe e o espírito único da Ericeira.",
       "welcome": "Bem-vindo a bordo"
     },
@@ -38,7 +40,9 @@
       "title": "Os nossos serviços",
       "boat": {
         "title": "Conhece os pescadores — pesca de barco",
-        "body": "Cada saída é uma experiência de dia inteiro, simples e sem preocupações. Inclui visita guiada ao porto, conhecer os pescadores locais e pescar com um skipper e tripulação experientes — todo o material e licenças necessárias incluídos. Trabalhamos com grupos pequenos para garantir conforto, segurança e um dia mais pessoal no mar. Todo o equipamento de segurança é fornecido, para poderes relaxar e desfrutar de um dia completo de pesca ao longo da costa da Ericeira."
+        "body1": "Cada saída é um dia inteiro no mar, simples e sem preocupações. Inclui uma visita guiada ao porto, tempo com os pescadores locais e pesca com skipper e tripulação experientes.",
+        "body2": "Todo o material e as licenças necessárias estão incluídos. Os grupos são pequenos para mais conforto, segurança e um dia mais pessoal.",
+        "body3": "O equipamento de segurança é fornecido para poderes relaxar e pescar ao longo da costa da Ericeira da manhã ao final da tarde."
       },
       "shore": {
         "title": "Pesca de costa",
@@ -66,13 +70,13 @@
       "joao": {
         "name": "João Juma",
         "role": "Skipper",
-        "bio": "Organizador e entusiasta da pesca, o João junta a comunidade para aprender a arte de levar o jantar para casa.",
+        "bio": "Natural da Ericeira, o João trata de cada saída do primeiro contacto ao último lanço—para que pescas com quem vive esta costa todos os dias.",
         "portraitAlt": "Retrato do João Juma, skipper"
       }
     },
     "cta": {
       "title": "Junta-te à lista de espera",
-      "body": "As nossas saídas são planeadas com cuidado para um número limitado de pessoas. Junta-te à lista de espera para saberes quando há próxima vaga.",
+      "body": "As saídas em grupo pequeno enchem depressa. Deixa o teu nome e avisamos logo que houver novas datas.",
       "button": "Junta-te"
     }
   },
@@ -85,7 +89,7 @@
       "Isca",
       "Licença diária",
       "Colete",
-      "Boa disposição",
+      "Boa companhia",
       "Levar o teu peixe para casa"
     ],
     "notIncludedTitle": "Não incluído",
@@ -93,7 +97,7 @@
       "Seguro de acidentes pessoais",
       "Bebidas e comida"
     ],
-    "waitingList": "As nossas saídas são planeadas com cuidado para um número limitado de pessoas. Junta-te à lista de espera para saberes quando há próxima vaga.",
+    "waitingList": "Diz-nos se preferes barco ou costa e quando estás disponível. Respondemos com o que encaixa e metemos-te na lista para a próxima vaga.",
     "reachUs": "Podes falar connosco pelo WhatsApp ou acompanhar a nossa comunidade online.",
     "whatsappLabel": "Enviar mensagem no WhatsApp",
     "community": "Segue-nos e fica perto da comunidade para novidades e datas de saída.",
