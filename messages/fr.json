@@ -14,7 +14,11 @@
     "services": "Services",
     "team": "Équipe",
     "language": "Langue",
-    "openMenu": "Ouvrir le menu"
+    "openMenu": "Ouvrir le menu",
+    "changeLanguage": "Changer de langue",
+    "localeEn": "English",
+    "localeFr": "Français",
+    "localePt": "Português"
   },
   "Home": {
     "hero": {
@@ -45,7 +49,10 @@
       "previousTrips": "Sorties précédentes",
       "ourFish": "Nos poissons",
       "boatAndCrew": "Bateau et équipage",
-      "placeholder": "Photos bientôt"
+      "placeholder": "Photos bientôt",
+      "altPreviousTrips": "Pêche en bateau lors d’une sortie précédente sur la côte d’Ericeira",
+      "altOurFish": "Poisson frais pêché lors d’une sortie Ericeira Fishing",
+      "altBoatAndCrew": "Le skipper João Juma à bord avec le matériel de pêche"
     },
     "team": {
       "eyebrow": "Nous rencontrer",
@@ -53,12 +60,14 @@
       "albano": {
         "name": "Mestre Albano",
         "role": "Capitaine",
-        "bio": "Avec plus de 50 ans d’expérience, le capitaine Albano considère la côte d’Ericeira comme son terrain d’attache."
+        "bio": "Avec plus de 50 ans d’expérience, le capitaine Albano considère la côte d’Ericeira comme son terrain d’attache.",
+        "portraitAlt": "Portrait de Mestre Albano, capitaine"
       },
       "joao": {
         "name": "João Juma",
         "role": "Skipper",
-        "bio": "Organisateur et passionné de pêche, João rassemble la communauté autour de l’art de ramener le dîner à la maison."
+        "bio": "Organisateur et passionné de pêche, João rassemble la communauté autour de l’art de ramener le dîner à la maison.",
+        "portraitAlt": "Portrait de João Juma, skipper"
       }
     },
     "cta": {

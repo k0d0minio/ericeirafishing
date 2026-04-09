@@ -14,7 +14,11 @@
     "services": "Serviços",
     "team": "Equipa",
     "language": "Idioma",
-    "openMenu": "Abrir menu"
+    "openMenu": "Abrir menu",
+    "changeLanguage": "Mudar idioma",
+    "localeEn": "English",
+    "localeFr": "Français",
+    "localePt": "Português"
   },
   "Home": {
     "hero": {
@@ -45,7 +49,10 @@
       "previousTrips": "Saídas anteriores",
       "ourFish": "Os nossos peixes",
       "boatAndCrew": "Barco e equipa",
-      "placeholder": "Fotos em breve"
+      "placeholder": "Fotos em breve",
+      "altPreviousTrips": "Convidados a pescar numa saída de barco anterior na costa da Ericeira",
+      "altOurFish": "Peixe fresco de uma saída da Ericeira Fishing",
+      "altBoatAndCrew": "O skipper João Juma no barco com o material de pesca"
     },
     "team": {
       "eyebrow": "Conhece-nos",
@@ -53,12 +60,14 @@
       "albano": {
         "name": "Mestre Albano",
         "role": "Capitão do barco",
-        "bio": "Com mais de 50 anos de experiência, o capitão Albano considera a costa da Ericeira a sua casa."
+        "bio": "Com mais de 50 anos de experiência, o capitão Albano considera a costa da Ericeira a sua casa.",
+        "portraitAlt": "Retrato do Mestre Albano, capitão do barco"
       },
       "joao": {
         "name": "João Juma",
         "role": "Skipper",
-        "bio": "Organizador e entusiasta da pesca, o João junta a comunidade para aprender a arte de levar o jantar para casa."
+        "bio": "Organizador e entusiasta da pesca, o João junta a comunidade para aprender a arte de levar o jantar para casa.",
+        "portraitAlt": "Retrato do João Juma, skipper"
       }
     },
     "cta": {

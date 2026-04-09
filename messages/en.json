@@ -14,7 +14,11 @@
     "services": "Services",
     "team": "Team",
     "language": "Language",
-    "openMenu": "Open menu"
+    "openMenu": "Open menu",
+    "changeLanguage": "Change language",
+    "localeEn": "English",
+    "localeFr": "Français",
+    "localePt": "Português"
   },
   "Home": {
     "hero": {
@@ -45,7 +49,10 @@
       "previousTrips": "Previous trips",
       "ourFish": "Our fish",
       "boatAndCrew": "Boat and crew",
-      "placeholder": "Photos coming soon"
+      "placeholder": "Photos coming soon",
+      "altPreviousTrips": "Guests fishing on a previous boat trip along the Ericeira coast",
+      "altOurFish": "Fresh catch from an Ericeira Fishing trip",
+      "altBoatAndCrew": "Skipper João Juma on the boat with fishing gear"
     },
     "team": {
       "eyebrow": "Meet us",
@@ -53,12 +60,14 @@
       "albano": {
         "name": "Mestre Albano",
         "role": "Boat captain",
-        "bio": "With over 50 years of experience, Captain Albano calls Ericeira’s coast home."
+        "bio": "With over 50 years of experience, Captain Albano calls Ericeira’s coast home.",
+        "portraitAlt": "Portrait of Mestre Albano, boat captain"
       },
       "joao": {
         "name": "João Juma",
         "role": "Skipper",
-        "bio": "Organiser and fishing enthusiast, João brings the community together to learn the art of bringing dinner home."
+        "bio": "Organiser and fishing enthusiast, João brings the community together to learn the art of bringing dinner home.",
+        "portraitAlt": "Portrait of João Juma, skipper"
       }
     },
     "cta": {

@@ -1,6 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { ContactForm } from "@/components/contact-form";
+import { FadeIn } from "@/components/motion/fade-in";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -34,41 +35,47 @@ export default async function JoinUsPage({ params }: Props) {
 
   return (
     <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col gap-12 px-4 py-12">
-      <header className="space-y-3">
-        <h1 className="text-3xl font-semibold tracking-tight">{t("title")}</h1>
-        <p className="text-muted-foreground text-lg leading-relaxed">
-          {t("schedule")}
-        </p>
-      </header>
+      <FadeIn>
+        <header className="space-y-3">
+          <h1 className="text-3xl font-semibold tracking-tight">{t("title")}</h1>
+          <p className="text-muted-foreground text-lg leading-relaxed">
+            {t("schedule")}
+          </p>
+        </header>
+      </FadeIn>
 
       <div className="grid gap-6 sm:grid-cols-2">
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-lg">{t("includedTitle")}</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <ul className="text-muted-foreground list-inside list-disc space-y-1 text-sm leading-relaxed">
-              {includedItems.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-lg">{t("notIncludedTitle")}</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <ul className="text-muted-foreground list-inside list-disc space-y-1 text-sm leading-relaxed">
-              {notIncludedItems.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </CardContent>
-        </Card>
+        <FadeIn delay={0.06}>
+          <Card className="h-full">
+            <CardHeader>
+              <CardTitle className="text-lg">{t("includedTitle")}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ul className="text-muted-foreground list-inside list-disc space-y-1 text-sm leading-relaxed">
+                {includedItems.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+        </FadeIn>
+        <FadeIn delay={0.12}>
+          <Card className="h-full">
+            <CardHeader>
+              <CardTitle className="text-lg">{t("notIncludedTitle")}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ul className="text-muted-foreground list-inside list-disc space-y-1 text-sm leading-relaxed">
+                {notIncludedItems.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+        </FadeIn>
       </div>
 
-      <section className="space-y-4">
+      <FadeIn delay={0.08} className="space-y-4">
         <p className="text-foreground leading-relaxed">{t("waitingList")}</p>
         <p className="text-muted-foreground leading-relaxed">{t("reachUs")}</p>
         <p className="text-muted-foreground text-sm leading-relaxed">
@@ -84,15 +91,15 @@ export default async function JoinUsPage({ params }: Props) {
             {t("whatsappLabel")}
           </a>
         </Button>
-      </section>
+      </FadeIn>
 
-      <section className="space-y-4 border-t pt-10">
+      <FadeIn delay={0.1} className="space-y-4 border-t pt-10">
         <h2 className="text-xl font-semibold tracking-tight">{t("formTitle")}</h2>
         <p className="text-muted-foreground text-sm leading-relaxed">
           {t("formIntro")}
         </p>
         <ContactForm />
-      </section>
+      </FadeIn>
     </main>
   );
 }
