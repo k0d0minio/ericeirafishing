@@ -1,31 +1,106 @@
 {
   "Metadata": {
-    "siteTitle": "Site",
-    "homeTitle": "Início",
-    "homeDescription": "Bem-vindo.",
-    "contactTitle": "Contacto",
-    "contactDescription": "Fale connosco."
+    "siteTitle": "Ericeira Fishing",
+    "homeTitle": "Ericeira Fishing — Experiências de pesca autênticas",
+    "homeDescription": "Ligue-se às raízes da Ericeira. Pesca de barco e de costa com locais, grupos pequenos e o verdadeiro espírito do mar.",
+    "joinUsTitle": "Junta-te à equipa — Ericeira Fishing",
+    "joinUsDescription": "Horários, o que está incluído e lista de espera para a próxima vaga. WhatsApp ou formulário.",
+    "contactTitle": "Lista de espera — Ericeira Fishing",
+    "contactDescription": "Diz-nos que queres a próxima vaga numa saída com a Ericeira Fishing."
   },
   "Nav": {
     "home": "Início",
-    "contact": "Contacto",
+    "joinUs": "Junta-te",
+    "services": "Serviços",
+    "team": "Equipa",
     "language": "Idioma",
     "openMenu": "Abrir menu"
   },
   "Home": {
-    "title": "Bem-vindo",
-    "description": "Esta é uma página temporária. O conteúdo será adicionado mais tarde."
+    "hero": {
+      "kicker": "Liga-te às raízes da Ericeira",
+      "title": "E leva o jantar para casa",
+      "learnMore": "Saber mais"
+    },
+    "lead": "Vive a Ericeira de verdade, conhece os pescadores locais e aprende a pescar de barco ou de costa.",
+    "about": {
+      "p1": "A Ericeira Fishing nasceu de uma ligação profunda ao mar e às tradições de pesca da Ericeira.",
+      "p2": "Oferecemos uma experiência local autêntica numa das costas mais icónicas de Portugal. Ouve as histórias dos pescadores, aprende as técnicas deles e deixa-te guiar por quem conhece estas águas por dentro. Quer sejas principiante ou experiente, as nossas experiências são desenhadas para serem descontraídas, seguras e inesquecíveis.",
+      "p3": "Isto não é turismo de massas. É uma forma autêntica de teres contacto direto com a última geração de pescadores da Ericeira. Apostamos em grupos pequenos, equipamento de qualidade e um ambiente acolhedor em que toda a gente se sente bem a bordo.",
+      "p4": "Mais do que pescar — é uma experiência: o oceano, a costa, a emoção do peixe e o espírito único da Ericeira.",
+      "welcome": "Bem-vindo a bordo"
+    },
+    "services": {
+      "title": "Os nossos serviços",
+      "boat": {
+        "title": "Conhece os pescadores — pesca de barco",
+        "body": "Cada saída é uma experiência de dia inteiro, simples e sem preocupações. Inclui visita guiada ao porto, conhecer os pescadores locais e pescar com um skipper e tripulação experientes — todo o material e licenças necessárias incluídos. Trabalhamos com grupos pequenos para garantir conforto, segurança e um dia mais pessoal no mar. Todo o equipamento de segurança é fornecido, para poderes relaxar e desfrutar de um dia completo de pesca ao longo da costa da Ericeira."
+      },
+      "shore": {
+        "title": "Pesca de costa",
+        "body": "A nossa pesca de costa é uma meia-manhã ou meio-dia descontraído para toda a gente, incluindo crianças e principiantes. Com um pescador local experiente, pescas na bela costa da Ericeira enquanto aprendes técnicas simples e dicas para espécies locais. Todo o equipamento e licenças estão incluídos. Grupos pequenos e um ambiente familiar tornam isto uma ótima forma de descobrir a pesca, respirar ar do mar e passar um bom momento junto ao oceano."
+      }
+    },
+    "gallery": {
+      "previousTrips": "Saídas anteriores",
+      "ourFish": "Os nossos peixes",
+      "boatAndCrew": "Barco e equipa",
+      "placeholder": "Fotos em breve"
+    },
+    "team": {
+      "eyebrow": "Conhece-nos",
+      "title": "A nossa equipa",
+      "albano": {
+        "name": "Mestre Albano",
+        "role": "Capitão do barco",
+        "bio": "Com mais de 50 anos de experiência, o capitão Albano considera a costa da Ericeira a sua casa."
+      },
+      "joao": {
+        "name": "João Juma",
+        "role": "Skipper",
+        "bio": "Organizador e entusiasta da pesca, o João junta a comunidade para aprender a arte de levar o jantar para casa."
+      }
+    },
+    "cta": {
+      "title": "Junta-te à lista de espera",
+      "body": "As nossas saídas são planeadas com cuidado para um número limitado de pessoas. Junta-te à lista de espera para saberes quando há próxima vaga.",
+      "button": "Junta-te"
+    }
+  },
+  "JoinUs": {
+    "title": "Junta-te à equipa",
+    "schedule": "As nossas saídas costumam começar por volta das 8h30 e terminar por volta das 16h.",
+    "includedTitle": "Incluído",
+    "includedItems": [
+      "Cana de pesca",
+      "Isca",
+      "Licença diária",
+      "Colete",
+      "Boa disposição",
+      "Levar o teu peixe para casa"
+    ],
+    "notIncludedTitle": "Não incluído",
+    "notIncludedItems": [
+      "Seguro de acidentes pessoais",
+      "Bebidas e comida"
+    ],
+    "waitingList": "As nossas saídas são planeadas com cuidado para um número limitado de pessoas. Junta-te à lista de espera para saberes quando há próxima vaga.",
+    "reachUs": "Podes falar connosco pelo WhatsApp ou acompanhar a nossa comunidade online.",
+    "whatsappLabel": "Enviar mensagem no WhatsApp",
+    "community": "Segue-nos e fica perto da comunidade para novidades e datas de saída.",
+    "formTitle": "Junta-te pelo formulário",
+    "formIntro": "Alternativamente, podes entrar na lista de espera através do formulário abaixo."
   },
   "Contact": {
-    "title": "Contacto",
-    "description": "Envie uma mensagem através do formulário abaixo.",
+    "title": "Lista de espera",
+    "description": "Deixa os teus dados e a tua mensagem. Respondemos com as próximas vagas disponíveis.",
     "name": "Nome",
     "email": "E-mail",
     "message": "Mensagem",
     "submit": "Enviar",
     "sending": "A enviar…",
-    "success": "Obrigado. A sua mensagem foi recebida.",
-    "serverError": "Algo correu mal. Tente novamente.",
+    "success": "Obrigado. Ficas na nossa lista — contactamos sobre a próxima vaga disponível.",
+    "serverError": "Algo correu mal. Tenta novamente.",
     "validation": {
       "nameRequired": "O nome é obrigatório",
       "emailInvalid": "Introduza um endereço de e-mail válido",

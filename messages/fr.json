@@ -1,31 +1,106 @@
 {
   "Metadata": {
-    "siteTitle": "Site",
-    "homeTitle": "Accueil",
-    "homeDescription": "Bienvenue.",
-    "contactTitle": "Contact",
-    "contactDescription": "Nous contacter."
+    "siteTitle": "Ericeira Fishing",
+    "homeTitle": "Ericeira Fishing — Pêche authentique",
+    "homeDescription": "Retrouvez les racines d’Ericeira. Pêche en bateau et du bord avec des skippers locaux, petits groupes et l’esprit de l’Atlantique.",
+    "joinUsTitle": "Rejoignez l’équipe — Ericeira Fishing",
+    "joinUsDescription": "Horaires, inclus / non inclus et liste d’attente pour la prochaine place. WhatsApp ou formulaire.",
+    "contactTitle": "Liste d’attente — Ericeira Fishing",
+    "contactDescription": "Indiquez que vous souhaitez une place sur la prochaine sortie avec Ericeira Fishing."
   },
   "Nav": {
     "home": "Accueil",
-    "contact": "Contact",
+    "joinUs": "Nous rejoindre",
+    "services": "Services",
+    "team": "Équipe",
     "language": "Langue",
     "openMenu": "Ouvrir le menu"
   },
   "Home": {
-    "title": "Bienvenue",
-    "description": "Ceci est une page provisoire. Le contenu sera ajouté plus tard."
+    "hero": {
+      "kicker": "Retrouvez les racines d’Ericeira",
+      "title": "Et ramenez le dîner à la maison",
+      "learnMore": "En savoir plus"
+    },
+    "lead": "Vivez la vraie Ericeira, rencontrez les pêcheurs locaux et apprenez à pêcher en bateau ou du rivage.",
+    "about": {
+      "p1": "Ericeira Fishing est née d’un lien profond avec la mer et les traditions de pêche d’Ericeira.",
+      "p2": "Nous proposons une expérience locale authentique sur l’un des littoraux les plus emblématiques du Portugal. Écoutez les histoires des pêcheurs, leurs techniques, et laissez-vous guider par ceux qui connaissent ces eaux par cœur. Débutant ou pêcheur aguerri, nos sorties sont pensées pour être détendues, sûres et inoubliables.",
+      "p3": "Ce n’est pas du tourisme de masse. C’est une façon authentique d’être au contact de la dernière génération de pêcheurs d’Ericeira. Nous privilégions les petits groupes, le bon matériel et une ambiance conviviale où chacun se sent le bienvenu à bord.",
+      "p4": "Plus que la pêche — une expérience : l’océan, la côte, le frisson de la prise et l’esprit unique d’Ericeira.",
+      "welcome": "Bienvenue à bord"
+    },
+    "services": {
+      "title": "Nos services",
+      "boat": {
+        "title": "Rencontrez les pêcheurs — pêche en bateau",
+        "body": "Chaque sortie est une journée complète, simple et sans souci : visite guidée du port, rencontre avec les pêcheurs locaux, et pêche avec un skipper et un équipage expérimentés — tout le matériel et les licences requises sont inclus. Nous limitons la taille des groupes pour le confort, la sécurité et une expérience plus personnelle. Tout l’équipement de sécurité est fourni : détendez-vous et profitez d’une journée de pêche le long de la côte d’Ericeira."
+      },
+      "shore": {
+        "title": "Pêche du bord",
+        "body": "Notre pêche du bord est une demi-journée détendue pour tous, y compris les enfants et les débutants. Avec un pêcheur local expérimenté, vous pêchez depuis le magnifique littoral d’Ericeira en apprenant des techniques simples et des astuces pour les espèces locales. Matériel et licences inclus. Petits groupes et ambiance chaleureuse : idéal pour découvrir la pêche, respirer l’air marin et passer un bon moment face à l’océan."
+      }
+    },
+    "gallery": {
+      "previousTrips": "Sorties précédentes",
+      "ourFish": "Nos poissons",
+      "boatAndCrew": "Bateau et équipage",
+      "placeholder": "Photos bientôt"
+    },
+    "team": {
+      "eyebrow": "Nous rencontrer",
+      "title": "Notre équipe",
+      "albano": {
+        "name": "Mestre Albano",
+        "role": "Capitaine",
+        "bio": "Avec plus de 50 ans d’expérience, le capitaine Albano considère la côte d’Ericeira comme son terrain d’attache."
+      },
+      "joao": {
+        "name": "João Juma",
+        "role": "Skipper",
+        "bio": "Organisateur et passionné de pêche, João rassemble la communauté autour de l’art de ramener le dîner à la maison."
+      }
+    },
+    "cta": {
+      "title": "Rejoignez la liste d’attente",
+      "body": "Nos sorties sont soigneusement planifiées pour un nombre limité de personnes. Inscrivez-vous sur la liste d’attente pour connaître la prochaine place disponible.",
+      "button": "Nous rejoindre"
+    }
+  },
+  "JoinUs": {
+    "title": "Rejoignez l’équipage",
+    "schedule": "Nos sorties commencent en général vers 8 h 30 et se terminent vers 16 h.",
+    "includedTitle": "Inclus",
+    "includedItems": [
+      "Canne à pêche",
+      "Appâts",
+      "Licence journalière",
+      "Gilet",
+      "Bonne humeur",
+      "Ramener votre poisson à la maison"
+    ],
+    "notIncludedTitle": "Non inclus",
+    "notIncludedItems": [
+      "Assurance risques personnels",
+      "Boissons et repas"
+    ],
+    "waitingList": "Nos sorties sont soigneusement planifiées pour un nombre limité de personnes. Rejoignez la liste d’attente pour savoir quand la prochaine place est disponible.",
+    "reachUs": "Vous pouvez nous joindre sur WhatsApp ou suivre notre communauté en ligne.",
+    "whatsappLabel": "Écrire sur WhatsApp",
+    "community": "Suivez-nous pour rester proche de la communauté : actualités et dates de sortie.",
+    "formTitle": "S’inscrire via le formulaire",
+    "formIntro": "Vous pouvez aussi rejoindre la liste d’attente via le formulaire ci-dessous."
   },
   "Contact": {
-    "title": "Contact",
-    "description": "Envoyez un message via le formulaire ci-dessous.",
+    "title": "Liste d’attente",
+    "description": "Laissez vos coordonnées et un message. Nous vous répondrons avec les prochaines places disponibles.",
     "name": "Nom",
     "email": "E-mail",
     "message": "Message",
     "submit": "Envoyer",
     "sending": "Envoi en cours…",
-    "success": "Merci. Votre message a bien été reçu.",
-    "serverError": "Une erreur s'est produite. Veuillez réessayer.",
+    "success": "Merci. Vous êtes sur notre liste — nous vous contacterons pour la prochaine place disponible.",
+    "serverError": "Une erreur s’est produite. Veuillez réessayer.",
     "validation": {
       "nameRequired": "Le nom est obligatoire",
       "emailInvalid": "Saisissez une adresse e-mail valide",

@@ -1,30 +1,105 @@
 {
   "Metadata": {
-    "siteTitle": "Site",
-    "homeTitle": "Home",
-    "homeDescription": "Welcome.",
-    "contactTitle": "Contact",
-    "contactDescription": "Get in touch."
+    "siteTitle": "Ericeira Fishing",
+    "homeTitle": "Ericeira Fishing — Authentic fishing experiences",
+    "homeDescription": "Connect with Ericeira’s roots. Boat and shore fishing with local skippers, small groups, and the real spirit of the coast.",
+    "joinUsTitle": "Join the crew — Ericeira Fishing",
+    "joinUsDescription": "Trip times, what’s included, and join the waiting list for the next spot. WhatsApp or form.",
+    "contactTitle": "Join the waiting list — Ericeira Fishing",
+    "contactDescription": "Tell us you’d like the next available spot on a trip with Ericeira Fishing."
   },
   "Nav": {
     "home": "Home",
-    "contact": "Contact",
+    "joinUs": "Join us",
+    "services": "Services",
+    "team": "Team",
     "language": "Language",
     "openMenu": "Open menu"
   },
   "Home": {
-    "title": "Welcome",
-    "description": "This is a placeholder page. Content will be added later."
+    "hero": {
+      "kicker": "Connect with Ericeira’s roots",
+      "title": "And bring dinner home",
+      "learnMore": "Learn more"
+    },
+    "lead": "Experience the real Ericeira, get to know the local fishermen and learn to fish by boat or from the shore.",
+    "about": {
+      "p1": "Ericeira Fishing was born from a deep connection to the sea and the fishing traditions of Ericeira.",
+      "p2": "We offer an authentic local experience on one of Portugal’s most iconic coastlines. Hear the fishermen’s stories, learn their techniques, and let yourself be guided by people who know these waters inside out. Whether you’re a beginner or an experienced angler, our experiences are designed to be relaxed, safe, and unforgettable.",
+      "p3": "This is not mass tourism. It’s an authentic way to be in first-hand contact with the last generation of fishermen in Ericeira. We focus on small groups, quality equipment, and a friendly atmosphere where everyone feels welcome on board.",
+      "p4": "More than just fishing — it’s an experience: the ocean, the coastline, the thrill of the catch, and the unique spirit of Ericeira.",
+      "welcome": "Welcome aboard"
+    },
+    "services": {
+      "title": "Our services",
+      "boat": {
+        "title": "Meet the fishermen — boat fishing",
+        "body": "Every trip is a full-day experience designed to be simple and worry-free. It includes a guided tour around the port, meeting local fishermen, and fishing with an experienced local skipper and crew — all tackle and required fishing licences included. We keep groups small for comfort, safety, and a more personal day on the water. All safety equipment is provided, so you can relax and enjoy a full day fishing along the Ericeira coast."
+      },
+      "shore": {
+        "title": "Shore fishing",
+        "body": "Our shore fishing experience is a relaxed half-day for everyone, including children and beginners. With an experienced local fisherman you’ll fish from Ericeira’s beautiful coastline while learning simple techniques and tips for local species. All equipment and required licences are included. Small groups and a friendly atmosphere make it a great way to discover fishing, breathe the sea air, and spend quality time by the ocean."
+      }
+    },
+    "gallery": {
+      "previousTrips": "Previous trips",
+      "ourFish": "Our fish",
+      "boatAndCrew": "Boat and crew",
+      "placeholder": "Photos coming soon"
+    },
+    "team": {
+      "eyebrow": "Meet us",
+      "title": "Our team",
+      "albano": {
+        "name": "Mestre Albano",
+        "role": "Boat captain",
+        "bio": "With over 50 years of experience, Captain Albano calls Ericeira’s coast home."
+      },
+      "joao": {
+        "name": "João Juma",
+        "role": "Skipper",
+        "bio": "Organiser and fishing enthusiast, João brings the community together to learn the art of bringing dinner home."
+      }
+    },
+    "cta": {
+      "title": "Join the waiting list",
+      "body": "Our trips are carefully planned for a limited number of people. Join the waiting list to hear when the next spot is available.",
+      "button": "Join us"
+    }
+  },
+  "JoinUs": {
+    "title": "Join the crew",
+    "schedule": "Our trips usually start around 8:30 and finish around 4 PM.",
+    "includedTitle": "Included",
+    "includedItems": [
+      "Fishing rod",
+      "Bait",
+      "Daily licence",
+      "Vest",
+      "Good fun",
+      "Bringing your own fish home"
+    ],
+    "notIncludedTitle": "Not included",
+    "notIncludedItems": [
+      "Personal risk insurance",
+      "Drinks and food"
+    ],
+    "waitingList": "Our trips are carefully planned for a limited number of people. Join the waiting list to know when the next spot is available.",
+    "reachUs": "You can reach us on WhatsApp or join our community online.",
+    "whatsappLabel": "Message us on WhatsApp",
+    "community": "Follow us and stay close to the community for news and trip updates.",
+    "formTitle": "Join via the form",
+    "formIntro": "Alternatively, you can join the waiting list through the form below."
   },
   "Contact": {
-    "title": "Contact",
-    "description": "Send a message using the form below.",
+    "title": "Join the waiting list",
+    "description": "Leave your details and message. We’ll get back to you with the next available spots.",
     "name": "Name",
     "email": "Email",
     "message": "Message",
     "submit": "Send",
     "sending": "Sending…",
-    "success": "Thank you. Your message has been received.",
+    "success": "Thank you. You’re on our list — we’ll be in touch about the next available spot.",
     "serverError": "Something went wrong. Please try again.",
     "validation": {
       "nameRequired": "Name is required",

@@ -15,14 +15,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import {
-  Field,
-  FieldContent,
-  FieldError,
-  FieldGroup,
-  FieldLabel,
-} from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
 function buildContactSchema(t: (key: string) => string) {
@@ -99,45 +93,49 @@ export function ContactForm() {
           className="flex flex-col gap-6"
           noValidate
         >
-          <FieldGroup>
-            <Field data-invalid={!!form.formState.errors.name}>
-              <FieldLabel htmlFor="contact-name">{t("name")}</FieldLabel>
-              <FieldContent>
-                <Input
-                  id="contact-name"
-                  autoComplete="name"
-                  aria-invalid={!!form.formState.errors.name}
-                  {...form.register("name")}
-                />
-                <FieldError errors={[form.formState.errors.name]} />
-              </FieldContent>
-            </Field>
-            <Field data-invalid={!!form.formState.errors.email}>
-              <FieldLabel htmlFor="contact-email">{t("email")}</FieldLabel>
-              <FieldContent>
-                <Input
-                  id="contact-email"
-                  type="email"
-                  autoComplete="email"
-                  aria-invalid={!!form.formState.errors.email}
-                  {...form.register("email")}
-                />
-                <FieldError errors={[form.formState.errors.email]} />
-              </FieldContent>
-            </Field>
-            <Field data-invalid={!!form.formState.errors.message}>
-              <FieldLabel htmlFor="contact-message">{t("message")}</FieldLabel>
-              <FieldContent>
-                <Textarea
-                  id="contact-message"
-                  rows={5}
-                  aria-invalid={!!form.formState.errors.message}
-                  {...form.register("message")}
-                />
-                <FieldError errors={[form.formState.errors.message]} />
-              </FieldContent>
-            </Field>
-          </FieldGroup>
+          <div className="space-y-2">
+            <Label htmlFor="contact-name">{t("name")}</Label>
+            <Input
+              id="contact-name"
+              autoComplete="name"
+              aria-invalid={!!form.formState.errors.name}
+              {...form.register("name")}
+            />
+            {form.formState.errors.name ? (
+              <p className="text-destructive text-sm" role="alert">
+                {form.formState.errors.name.message}
+              </p>
+            ) : null}
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="contact-email">{t("email")}</Label>
+            <Input
+              id="contact-email"
+              type="email"
+              autoComplete="email"
+              aria-invalid={!!form.formState.errors.email}
+              {...form.register("email")}
+            />
+            {form.formState.errors.email ? (
+              <p className="text-destructive text-sm" role="alert">
+                {form.formState.errors.email.message}
+              </p>
+            ) : null}
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="contact-message">{t("message")}</Label>
+            <Textarea
+              id="contact-message"
+              rows={5}
+              aria-invalid={!!form.formState.errors.message}
+              {...form.register("message")}
+            />
+            {form.formState.errors.message ? (
+              <p className="text-destructive text-sm" role="alert">
+                {form.formState.errors.message.message}
+              </p>
+            ) : null}
+          </div>
           {serverError ? (
             <p className="text-destructive text-sm" role="alert">
               {t("serverError")}
