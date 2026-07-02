@@ -1,30 +1,47 @@
 import type { Metadata } from "next";
 
-import { gallerySlots, site } from "@/lib/site";
+import { site } from "@/lib/site";
+import { type Locale } from "@/lib/i18n/config";
+import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { InstagramIcon } from "@/components/icons";
 import { CtaBand } from "@/components/cta-band";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/motion";
 import { SmartImage } from "@/components/smart-image";
 
-export const metadata: Metadata = {
-  title: "Gallery",
-  description:
-    "Photos from boat and shore fishing trips along the Ericeira coast — the water, the catch, and life in the harbour.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = (await params) as { locale: Locale };
+  const dict = await getDictionary(locale);
+  return {
+    title: dict.meta.gallery.title,
+    description: dict.meta.gallery.description,
+  };
+}
 
-export default function GalleryPage() {
+export default async function GalleryPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = (await params) as { locale: Locale };
+  const dict = await getDictionary(locale);
+  const t = dict.galleryPage;
+
   return (
     <>
       <PageHero
-        kicker="From the logbook"
-        title="Gallery"
-        lede="Moments from boat days, shore sessions, and our skippers along the Ericeira coast — the water, the catch, and life in the harbour."
+        kicker={t.hero.kicker}
+        title={t.hero.title}
+        lede={t.hero.lede}
       />
 
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 md:py-18">
         <div className="columns-2 gap-4 md:columns-3 [&>*]:mb-4">
-          {gallerySlots.map((photo, i) => (
+          {t.photos.map((photo, i) => (
             <Reveal key={photo.src} delay={(i % 3) * 0.08} className="break-inside-avoid">
               <SmartImage
                 src={photo.src}
@@ -40,7 +57,7 @@ export default function GalleryPage() {
 
         <Reveal>
           <p className="mt-10 text-center text-sm text-muted-foreground">
-            More photos and trip reels on{" "}
+            {t.instagramPrefix}{" "}
             <a
               href={site.instagramUrl}
               target="_blank"
@@ -55,9 +72,11 @@ export default function GalleryPage() {
       </section>
 
       <CtaBand
-        title="Want to be in the next photo?"
-        body="Small-group trips fill up quickly. Join the waiting list and we'll let you know as soon as the next dates open."
-        buttonLabel="Join the waiting list"
+        locale={locale}
+        dict={dict}
+        title={t.cta.title}
+        body={t.cta.body}
+        buttonLabel={t.cta.buttonLabel}
       />
     </>
   );

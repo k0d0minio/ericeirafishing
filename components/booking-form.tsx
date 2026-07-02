@@ -7,26 +7,25 @@ import { Anchor, CheckCircle2, LoaderCircle, Send } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { submitBooking } from "@/lib/actions";
-import { bookingSchema, type BookingValues } from "@/lib/booking-schema";
+import { getBookingSchema, type BookingValues } from "@/lib/booking-schema";
+import type { Dictionary } from "@/lib/i18n/dictionaries/types";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
-const tripOptions = [
-  { value: "boat", label: "Boat fishing", hint: "6 AM – 1 PM" },
-  { value: "shore", label: "Shore fishing", hint: "Half-day" },
-  { value: "either", label: "Either", hint: "Not sure yet" },
-] as const;
-
 const groupOptions = ["1", "2", "3-4", "5+"] as const;
 
-export function BookingForm() {
+type BookingFormProps = {
+  dict: Dictionary["bookingForm"];
+};
+
+export function BookingForm({ dict }: BookingFormProps) {
   const [status, setStatus] = React.useState<"idle" | "sent" | "error">("idle");
   const [pending, startTransition] = React.useTransition();
 
   const form = useForm<BookingValues>({
-    resolver: zodResolver(bookingSchema),
+    resolver: zodResolver(getBookingSchema(dict.validation)),
     defaultValues: {
       name: "",
       email: "",
@@ -42,7 +41,7 @@ export function BookingForm() {
 
   const onSubmit = form.handleSubmit((values) => {
     startTransition(async () => {
-      const result = await submitBooking(values);
+      const result = await submitBooking(values, dict.validation);
       setStatus(result.ok ? "sent" : "error");
     });
   });
@@ -54,15 +53,14 @@ export function BookingForm() {
           <CheckCircle2 className="size-7" strokeWidth={1.75} />
         </span>
         <h3 className="mt-5 font-display text-2xl font-semibold">
-          You&apos;re on the list
+          {dict.success.title}
         </h3>
         <p className="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-muted-foreground">
-          Thank you — we&apos;ll be in touch about the next available spot.
-          Keep an eye on your inbox (and WhatsApp, if you left a number).
+          {dict.success.body}
         </p>
         <p className="kicker mt-6 flex items-center justify-center gap-2 text-buoy-deep">
           <Anchor className="size-3.5" />
-          Tight lines
+          {dict.success.tagline}
         </p>
       </div>
     );
@@ -71,21 +69,29 @@ export function BookingForm() {
   return (
     <form onSubmit={onSubmit} noValidate className="space-y-7">
       <div className="grid gap-7 sm:grid-cols-2">
-        <FieldBlock label="Name" htmlFor="name" error={errors.name?.message}>
+        <FieldBlock
+          label={dict.fields.name.label}
+          htmlFor="name"
+          error={errors.name?.message}
+        >
           <Input
             id="name"
             autoComplete="name"
-            placeholder="Your name"
+            placeholder={dict.fields.name.placeholder}
             aria-invalid={!!errors.name}
             {...form.register("name")}
           />
         </FieldBlock>
-        <FieldBlock label="Email" htmlFor="email" error={errors.email?.message}>
+        <FieldBlock
+          label={dict.fields.email.label}
+          htmlFor="email"
+          error={errors.email?.message}
+        >
           <Input
             id="email"
             type="email"
             autoComplete="email"
-            placeholder="you@example.com"
+            placeholder={dict.fields.email.placeholder}
             aria-invalid={!!errors.email}
             {...form.register("email")}
           />
@@ -93,27 +99,28 @@ export function BookingForm() {
       </div>
 
       <FieldBlock
-        label="WhatsApp / phone"
+        label={dict.fields.phone.label}
         htmlFor="phone"
         optional
+        optionalLabel={dict.optional}
         error={errors.phone?.message}
       >
         <Input
           id="phone"
           type="tel"
           autoComplete="tel"
-          placeholder="+351 …"
+          placeholder={dict.fields.phone.placeholder}
           {...form.register("phone")}
         />
       </FieldBlock>
 
-      <FieldBlock label="Boat or shore?" error={errors.trip?.message}>
+      <FieldBlock label={dict.fields.trip.label} error={errors.trip?.message}>
         <div
           role="radiogroup"
-          aria-label="Boat or shore?"
+          aria-label={dict.fields.trip.label}
           className="grid gap-3 sm:grid-cols-3"
         >
-          {tripOptions.map((option) => (
+          {dict.tripOptions.map((option) => (
             <button
               key={option.value}
               type="button"
@@ -138,10 +145,13 @@ export function BookingForm() {
         </div>
       </FieldBlock>
 
-      <FieldBlock label="How many of you?" error={errors.groupSize?.message}>
+      <FieldBlock
+        label={dict.fields.groupSize.label}
+        error={errors.groupSize?.message}
+      >
         <div
           role="radiogroup"
-          aria-label="How many of you?"
+          aria-label={dict.fields.groupSize.label}
           className="flex flex-wrap gap-3"
         >
           {groupOptions.map((option) => (
@@ -167,36 +177,36 @@ export function BookingForm() {
       </FieldBlock>
 
       <FieldBlock
-        label="When are you free?"
+        label={dict.fields.availability.label}
         htmlFor="availability"
         error={errors.availability?.message}
       >
         <Input
           id="availability"
-          placeholder="e.g. weekends in August, or specific dates"
+          placeholder={dict.fields.availability.placeholder}
           aria-invalid={!!errors.availability}
           {...form.register("availability")}
         />
       </FieldBlock>
 
       <FieldBlock
-        label="Message"
+        label={dict.fields.message.label}
         htmlFor="message"
         optional
+        optionalLabel={dict.optional}
         error={errors.message?.message}
       >
         <Textarea
           id="message"
           rows={4}
-          placeholder="Anything we should know — questions, occasions, kids aboard…"
+          placeholder={dict.fields.message.placeholder}
           {...form.register("message")}
         />
       </FieldBlock>
 
       {status === "error" ? (
         <p role="alert" className="text-sm font-medium text-destructive">
-          Something went wrong sending your request. Please try again, or
-          message us on WhatsApp.
+          {dict.errorGeneral}
         </p>
       ) : null}
 
@@ -208,12 +218,12 @@ export function BookingForm() {
         {pending ? (
           <>
             <LoaderCircle data-icon="inline-start" className="size-4 animate-spin" />
-            Sending…
+            {dict.submitting}
           </>
         ) : (
           <>
             <Send data-icon="inline-start" className="size-4" />
-            Join the waiting list
+            {dict.submit}
           </>
         )}
       </Button>
@@ -225,12 +235,14 @@ function FieldBlock({
   label,
   htmlFor,
   optional,
+  optionalLabel,
   error,
   children,
 }: {
   label: string;
   htmlFor?: string;
   optional?: boolean;
+  optionalLabel?: string;
   error?: string;
   children: React.ReactNode;
 }) {
@@ -240,7 +252,7 @@ function FieldBlock({
         {label}
         {optional ? (
           <span className="ml-1 normal-case tracking-normal text-muted-foreground">
-            (optional)
+            {optionalLabel}
           </span>
         ) : null}
       </Label>
