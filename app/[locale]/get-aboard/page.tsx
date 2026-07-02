@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Check, Clock, MessageCircle, Waves } from "lucide-react";
 
-import { included, site } from "@/lib/site";
+import { site } from "@/lib/site";
+import { type Locale } from "@/lib/i18n/config";
+import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { InstagramIcon } from "@/components/icons";
 import { Button } from "@/components/ui/button";
 import { BookingForm } from "@/components/booking-form";
@@ -9,19 +11,35 @@ import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/motion";
 import { WaveDivider } from "@/components/wave-divider";
 
-export const metadata: Metadata = {
-  title: "Get Aboard",
-  description:
-    "Join the waiting list for a boat or shore fishing trip in Ericeira. Trip times, what's included, WhatsApp, and the booking form — all in one place.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = (await params) as { locale: Locale };
+  const dict = await getDictionary(locale);
+  return {
+    title: dict.meta.getAboard.title,
+    description: dict.meta.getAboard.description,
+  };
+}
 
-export default function GetAboardPage() {
+export default async function GetAboardPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = (await params) as { locale: Locale };
+  const dict = await getDictionary(locale);
+  const t = dict.getAboardPage;
+  const included = dict.siteData.included;
+
   return (
     <>
       <PageHero
-        kicker="Get aboard · Waiting list"
-        title="Ready to bring dinner home?"
-        lede="Our trips are carefully planned and for a limited number of people. Join the waiting list to know the next spot available."
+        kicker={t.hero.kicker}
+        title={t.hero.title}
+        lede={t.hero.lede}
       />
 
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 md:py-18">
@@ -32,24 +50,25 @@ export default function GetAboardPage() {
               <div className="rounded-lg border border-border bg-card p-7">
                 <p className="kicker flex items-center gap-2 text-buoy-deep">
                   <Clock className="size-4" />
-                  Schedule
+                  {t.schedule.kicker}
                 </p>
                 <p className="mt-3 leading-relaxed">
-                  Our boat trips usually start around{" "}
-                  <strong className="font-semibold">6 AM</strong> and finish
-                  around <strong className="font-semibold">1 PM</strong>.
+                  {t.schedule.bodyPrefix}{" "}
+                  <strong className="font-semibold">{t.schedule.time1}</strong>{" "}
+                  {t.schedule.bodyMid}{" "}
+                  <strong className="font-semibold">{t.schedule.time2}</strong>
+                  {t.schedule.bodySuffix}
                 </p>
                 <p className="mt-3 flex items-start gap-2.5 text-sm text-muted-foreground">
                   <Waves className="mt-0.5 size-4 shrink-0 text-seaglass" />
-                  Shore fishing depends on tide, wind, and other meteorological
-                  factors — we&apos;ll confirm timing with you.
+                  {t.schedule.note}
                 </p>
               </div>
             </Reveal>
 
             <Reveal delay={0.1}>
               <div className="rounded-lg border border-border bg-card p-7">
-                <p className="kicker text-buoy-deep">What&apos;s included</p>
+                <p className="kicker text-buoy-deep">{t.included.kicker}</p>
                 <ul className="mt-4 grid gap-2.5 sm:grid-cols-2">
                   {included.map((item) => (
                     <li key={item} className="flex items-center gap-2.5 text-sm">
@@ -65,10 +84,9 @@ export default function GetAboardPage() {
 
             <Reveal delay={0.2}>
               <div className="theme-ink bg-chart-grid-dark rounded-lg p-7">
-                <p className="kicker text-buoy">Faster on WhatsApp?</p>
+                <p className="kicker text-buoy">{t.whatsapp.kicker}</p>
                 <p className="mt-3 text-sm leading-relaxed text-sand/75">
-                  Message us directly and we&apos;ll reply with what fits —
-                  boat or shore, and the next opening.
+                  {t.whatsapp.body}
                 </p>
                 <div className="mt-5 flex flex-col gap-3">
                   <Button
@@ -106,16 +124,14 @@ export default function GetAboardPage() {
           {/* booking form */}
           <Reveal delay={0.15}>
             <div className="rounded-lg border border-border bg-card p-7 md:p-10">
-              <p className="kicker text-buoy-deep">Join via the form</p>
+              <p className="kicker text-buoy-deep">{t.form.kicker}</p>
               <h2 className="mt-3 font-display text-2xl font-semibold md:text-3xl">
-                Join the waiting list
+                {t.form.title}
               </h2>
               <p className="mt-3 mb-8 text-sm leading-relaxed text-muted-foreground">
-                Tell us boat or shore and when you&apos;re free. We&apos;ll
-                reply with what fits and add you to the list for the next
-                opening — or just ask us a general question.
+                {t.form.body}
               </p>
-              <BookingForm />
+              <BookingForm dict={dict.bookingForm} />
             </div>
           </Reveal>
         </div>

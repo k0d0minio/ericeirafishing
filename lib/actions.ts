@@ -1,6 +1,7 @@
 "use server";
 
-import { bookingSchema, type BookingValues } from "@/lib/booking-schema";
+import { getBookingSchema, type BookingValues } from "@/lib/booking-schema";
+import type { Dictionary } from "@/lib/i18n/dictionaries/types";
 
 export type BookingResult =
   | { ok: true }
@@ -11,10 +12,13 @@ export type BookingResult =
  * up yet, so submissions are logged server-side; swap the console.log for an
  * email or WhatsApp API call when credentials are available.
  */
-export async function submitBooking(values: BookingValues): Promise<BookingResult> {
-  const parsed = bookingSchema.safeParse(values);
+export async function submitBooking(
+  values: BookingValues,
+  validation: Dictionary["bookingForm"]["validation"]
+): Promise<BookingResult> {
+  const parsed = getBookingSchema(validation).safeParse(values);
   if (!parsed.success) {
-    return { ok: false, error: "Please check the form and try again." };
+    return { ok: false, error: validation.formInvalid };
   }
 
   console.log("[booking] new request", JSON.stringify(parsed.data));

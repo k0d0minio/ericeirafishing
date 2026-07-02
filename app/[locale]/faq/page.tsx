@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
-import { faqs } from "@/lib/site";
+import { type Locale } from "@/lib/i18n/config";
+import { getDictionary } from "@/lib/i18n/get-dictionary";
 import {
   Accordion,
   AccordionContent,
@@ -11,26 +12,42 @@ import { CtaBand } from "@/components/cta-band";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/motion";
 
-export const metadata: Metadata = {
-  title: "FAQ",
-  description:
-    "Everything you need to know before a fishing trip in Ericeira — experience, equipment, licences, weather, species, and how to book.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = (await params) as { locale: Locale };
+  const dict = await getDictionary(locale);
+  return {
+    title: dict.meta.faq.title,
+    description: dict.meta.faq.description,
+  };
+}
 
-export default function FaqPage() {
+export default async function FaqPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = (await params) as { locale: Locale };
+  const dict = await getDictionary(locale);
+  const t = dict.faqPage;
+  const faqs = dict.siteData.faqs;
+
   return (
     <>
       <PageHero
-        kicker="Before you cast off"
-        title="Frequently asked questions"
-        lede="Everything you need to know before heading out — experience, gear, weather, what you can catch, and how to book."
+        kicker={t.hero.kicker}
+        title={t.hero.title}
+        lede={t.hero.lede}
       />
 
       <section className="mx-auto max-w-3xl px-4 py-14 sm:px-6 md:py-18">
         <Reveal>
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, i) => (
-              <AccordionItem key={faq.q} value={faq.q}>
+              <AccordionItem key={i} value={faq.q}>
                 <AccordionTrigger className="gap-4 text-left font-display text-lg font-medium">
                   <span className="flex items-baseline gap-4">
                     <span className="kicker shrink-0 text-buoy-deep">
@@ -49,10 +66,12 @@ export default function FaqPage() {
       </section>
 
       <CtaBand
-        kicker="Still wondering something?"
-        title="Ask us directly — we're quick on WhatsApp"
-        body="Or join the waiting list and we'll get back to you with the next available spots."
-        buttonLabel="Join the waiting list"
+        locale={locale}
+        dict={dict}
+        kicker={t.cta.kicker}
+        title={t.cta.title}
+        body={t.cta.body}
+        buttonLabel={t.cta.buttonLabel}
       />
     </>
   );
