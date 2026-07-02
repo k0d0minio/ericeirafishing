@@ -7,9 +7,10 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
-  --font-heading: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-karla), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-heading: var(--font-fraunces), Georgia, serif;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -46,75 +47,90 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* Ericeira palette — deep Atlantic ink, sun-bleached sand, buoy coral */
+  --color-ink: var(--ink);
+  --color-ink-deep: var(--ink-deep);
+  --color-ink-soft: var(--ink-soft);
+  --color-sand: var(--sand);
+  --color-sand-deep: var(--sand-deep);
+  --color-foam: var(--foam);
+  --color-buoy: var(--buoy);
+  --color-buoy-deep: var(--buoy-deep);
+  --color-rope: var(--rope);
+  --color-seaglass: var(--seaglass);
+  --color-gold: var(--gold);
 }
 
 :root {
-  --background: oklch(0.98 0.012 210);
-  --foreground: oklch(0.22 0.04 250);
-  --card: oklch(0.995 0.008 210);
-  --card-foreground: oklch(0.22 0.04 250);
-  --popover: oklch(0.995 0.008 210);
-  --popover-foreground: oklch(0.22 0.04 250);
-  --primary: oklch(0.48 0.11 200);
-  --primary-foreground: oklch(0.99 0.01 210);
-  --secondary: oklch(0.94 0.035 205);
-  --secondary-foreground: oklch(0.22 0.04 250);
-  --muted: oklch(0.94 0.025 210);
-  --muted-foreground: oklch(0.45 0.03 240);
-  --accent: oklch(0.93 0.04 200);
-  --accent-foreground: oklch(0.22 0.04 250);
+  /* Base ocean tokens */
+  --ink: oklch(0.27 0.05 240);
+  --ink-deep: oklch(0.21 0.045 242);
+  --ink-soft: oklch(0.34 0.05 236);
+  --sand: oklch(0.955 0.02 84);
+  --sand-deep: oklch(0.9 0.032 82);
+  --foam: oklch(0.93 0.028 195);
+  --buoy: oklch(0.62 0.18 38);
+  --buoy-deep: oklch(0.54 0.17 34);
+  --rope: oklch(0.72 0.085 78);
+  --seaglass: oklch(0.79 0.07 185);
+  --gold: oklch(0.8 0.115 85);
+
+  /* shadcn tokens mapped onto the palette */
+  --background: var(--sand);
+  --foreground: var(--ink-deep);
+  --card: oklch(0.975 0.014 86);
+  --card-foreground: var(--ink-deep);
+  --popover: oklch(0.975 0.014 86);
+  --popover-foreground: var(--ink-deep);
+  --primary: var(--ink);
+  --primary-foreground: var(--sand);
+  --secondary: var(--foam);
+  --secondary-foreground: var(--ink-deep);
+  --muted: oklch(0.915 0.022 84);
+  --muted-foreground: oklch(0.47 0.035 240);
+  --accent: var(--foam);
+  --accent-foreground: var(--ink-deep);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.88 0.03 220);
-  --input: oklch(0.88 0.03 220);
-  --ring: oklch(0.48 0.11 200);
+  --border: oklch(0.86 0.03 82);
+  --input: oklch(0.86 0.03 82);
+  --ring: var(--buoy);
   --chart-1: oklch(0.62 0.14 200);
   --chart-2: oklch(0.55 0.1 220);
   --chart-3: oklch(0.45 0.08 240);
   --chart-4: oklch(0.4 0.06 200);
   --chart-5: oklch(0.35 0.05 230);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.97 0.015 210);
-  --sidebar-foreground: oklch(0.22 0.04 250);
-  --sidebar-primary: oklch(0.48 0.11 200);
-  --sidebar-primary-foreground: oklch(0.99 0.01 210);
-  --sidebar-accent: oklch(0.93 0.04 200);
-  --sidebar-accent-foreground: oklch(0.22 0.04 250);
-  --sidebar-border: oklch(0.88 0.03 220);
-  --sidebar-ring: oklch(0.48 0.11 200);
+  --radius: 0.375rem;
+  --sidebar: var(--sand);
+  --sidebar-foreground: var(--ink-deep);
+  --sidebar-primary: var(--ink);
+  --sidebar-primary-foreground: var(--sand);
+  --sidebar-accent: var(--foam);
+  --sidebar-accent-foreground: var(--ink-deep);
+  --sidebar-border: oklch(0.86 0.03 82);
+  --sidebar-ring: var(--buoy);
 }
 
-.dark {
-  --background: oklch(0.16 0.04 250);
-  --foreground: oklch(0.96 0.02 210);
-  --card: oklch(0.2 0.04 245);
-  --card-foreground: oklch(0.96 0.02 210);
-  --popover: oklch(0.2 0.04 245);
-  --popover-foreground: oklch(0.96 0.02 210);
-  --primary: oklch(0.72 0.14 195);
-  --primary-foreground: oklch(0.16 0.04 250);
-  --secondary: oklch(0.26 0.05 240);
-  --secondary-foreground: oklch(0.96 0.02 210);
-  --muted: oklch(0.24 0.03 245);
-  --muted-foreground: oklch(0.72 0.03 210);
-  --accent: oklch(0.26 0.05 220);
-  --accent-foreground: oklch(0.96 0.02 210);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(0.3 0.04 240);
-  --input: oklch(0.3 0.04 240);
-  --ring: oklch(0.72 0.14 195);
-  --chart-1: oklch(0.72 0.14 195);
-  --chart-2: oklch(0.62 0.1 220);
-  --chart-3: oklch(0.55 0.08 240);
-  --chart-4: oklch(0.48 0.06 200);
-  --chart-5: oklch(0.4 0.05 230);
-  --sidebar: oklch(0.18 0.04 248);
-  --sidebar-foreground: oklch(0.96 0.02 210);
-  --sidebar-primary: oklch(0.72 0.14 195);
-  --sidebar-primary-foreground: oklch(0.16 0.04 250);
-  --sidebar-accent: oklch(0.26 0.05 220);
-  --sidebar-accent-foreground: oklch(0.96 0.02 210);
-  --sidebar-border: oklch(0.3 0.04 240);
-  --sidebar-ring: oklch(0.72 0.14 195);
+/* Dark surfaces (hero, footer, CTA) — applied per-section, not by media query */
+.theme-ink {
+  --background: var(--ink-deep);
+  --foreground: oklch(0.94 0.018 90);
+  --card: var(--ink);
+  --card-foreground: oklch(0.94 0.018 90);
+  --popover: var(--ink);
+  --popover-foreground: oklch(0.94 0.018 90);
+  --primary: var(--gold);
+  --primary-foreground: var(--ink-deep);
+  --secondary: var(--ink-soft);
+  --secondary-foreground: oklch(0.94 0.018 90);
+  --muted: var(--ink-soft);
+  --muted-foreground: oklch(0.74 0.03 210);
+  --accent: var(--ink-soft);
+  --accent-foreground: oklch(0.94 0.018 90);
+  --border: oklch(0.38 0.045 235);
+  --input: oklch(0.38 0.045 235);
+  color: var(--foreground);
+  background-color: var(--background);
 }
 
 @layer base {
@@ -125,6 +141,104 @@
     @apply bg-background text-foreground;
   }
   html {
-    @apply font-sans;
+    @apply font-sans scroll-smooth;
+  }
+  ::selection {
+    background: var(--buoy);
+    color: var(--sand);
+  }
+}
+
+@utility font-display {
+  font-family: var(--font-display);
+}
+
+/* Uppercase mono kicker used for section labels, coordinates, tide notes */
+@utility kicker {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+/* Faint nautical-chart grid for light sections */
+@utility bg-chart-grid {
+  background-image: linear-gradient(
+      to right,
+      color-mix(in oklch, var(--ink) 6%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      color-mix(in oklch, var(--ink) 6%, transparent) 1px,
+      transparent 1px
+    );
+  background-size: 56px 56px;
+}
+
+/* Faint chart grid for dark (ink) sections */
+@utility bg-chart-grid-dark {
+  background-image: linear-gradient(
+      to right,
+      color-mix(in oklch, var(--sand) 7%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      color-mix(in oklch, var(--sand) 7%, transparent) 1px,
+      transparent 1px
+    );
+  background-size: 56px 56px;
+}
+
+/* Rope-stitch rule: dashed horizontal line with a knot feel */
+@utility tide-rule {
+  background-image: repeating-linear-gradient(
+    to right,
+    currentColor 0 14px,
+    transparent 14px 24px
+  );
+  height: 2px;
+  opacity: 0.35;
+}
+
+/* Ticket-stub edge: punched semicircles along the left side */
+@utility ticket-edge {
+  mask-image: radial-gradient(circle 7px at 0 50%, transparent 97%, black 100%);
+  mask-size: 100% 28px;
+  mask-repeat: repeat-y;
+}
+
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-1.2deg);
+  }
+  50% {
+    transform: translateY(-9px) rotate(1.2deg);
+  }
+}
+
+@utility animate-bob {
+  animation: bob 5.2s ease-in-out infinite;
+}
+
+@keyframes drift-x {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@utility animate-drift {
+  animation: drift-x 36s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-bob,
+  .animate-drift {
+    animation: none;
   }
 }

@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ericeira Fishing
 
-## Getting Started
+Marketing and booking site for [Ericeira Fishing](https://ericeirafishing.com) — boat and shore
+fishing trips with local fishermen in Ericeira, Portugal.
 
-First, run the development server:
+Built with Next.js (App Router), Tailwind CSS v4, shadcn/ui, and Framer Motion.
+
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Pages
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Route         | Content                                                          |
+| ------------- | ---------------------------------------------------------------- |
+| `/`           | Hero, services (boat & shore), team, gallery and FAQ teasers, CTA |
+| `/fishermen`  | "The Fishermen of Ericeira" story (the site's Context page)       |
+| `/gallery`    | Photo grid                                                        |
+| `/faq`        | All frequently asked questions                                    |
+| `/get-aboard` | Schedule, what's included, WhatsApp links, waiting-list form      |
 
-## Learn More
+## Adding the real photos
 
-To learn more about Next.js, take a look at the following resources:
+Every image renders through `components/smart-image.tsx`, which shows a styled placeholder
+(labelled with the expected file path) until the real file exists. Drop photos into
+`public/images/` with these names and they appear automatically — no code changes needed:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `hero.jpg` — home hero (portrait, 4:5)
+- `praia-dos-pescadores.jpg` — story teaser + article (square / 16:10)
+- `boat-fishing.jpg`, `shore-fishing.jpg` — service cards (3:2)
+- `mestre-dariu.jpg`, `joao-pedro.jpg` — team portraits (4:5)
+- `gallery-01.jpg` … `gallery-09.jpg` — gallery grid
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Booking form
 
-## Deploy on Vercel
+The waiting-list form (`components/booking-form.tsx`) validates with zod + react-hook-form and
+submits to the `submitBooking` server action in `lib/actions.ts`. Submissions are currently
+logged server-side — wire the action to an email or WhatsApp API when credentials are available.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Content
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+All site copy (navigation, team, FAQs, included items, gallery slots, contact details) lives in
+`lib/site.ts`.
