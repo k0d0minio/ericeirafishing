@@ -4,7 +4,7 @@
     "homeTitle": "Ericeira Fishing — Pesca de barco e costa com locais",
     "homeDescription": "Saídas de dia completo de barco e meias jornadas de pesca de costa com skippers locais. Grupos pequenos, material e licenças incluídos.",
     "joinUsTitle": "Junta-te à equipa — Ericeira Fishing",
-    "joinUsDescription": "Horários, o que está incluído e lista de espera para a próxima vaga. WhatsApp ou formulário.",
+    "joinUsDescription": "Horários, o que está incluído, WhatsApp, formulário e dúvidas — um só sítio para reservar ou falar connosco.",
     "contactTitle": "Lista de espera — Ericeira Fishing",
     "contactDescription": "Diz-nos que queres a próxima vaga numa saída com a Ericeira Fishing.",
     "galleryTitle": "Galeria — Ericeira Fishing",
@@ -14,8 +14,10 @@
     "home": "Início",
     "joinUs": "Junta-te",
     "gallery": "Galeria",
+    "galleryOnHome": "Fotos no início",
     "services": "Serviços",
     "team": "Equipa",
+    "primaryNav": "Principal",
     "language": "Idioma",
     "openMenu": "Abrir menu",
     "changeLanguage": "Mudar idioma",
@@ -23,13 +25,31 @@
     "localeFr": "Français",
     "localePt": "Português"
   },
+  "Footer": {
+    "bookTitle": "Reservar e contacto",
+    "exploreTitle": "Explorar",
+    "whatsapp": "WhatsApp",
+    "servicesOnHome": "Serviços (início)",
+    "teamOnHome": "Equipa (início)",
+    "copyrightName": "Ericeira Fishing"
+  },
   "Home": {
     "hero": {
       "kicker": "Liga-te às raízes da Ericeira",
       "title": "E leva o jantar para casa",
-      "learnMore": "Saber mais"
+      "learnMore": "Saber mais",
+      "bookTrip": "Reservar uma saída",
+      "imageAlt": "Barco de pesca ao longo da costa da Ericeira"
     },
     "lead": "Pesca de barco em dia completo e meias jornadas descontraídas na costa com skippers locais—grupos pequenos, todo o material e licenças incluídos.",
+    "glance": {
+      "title": "Resumo",
+      "boat": "Barco: dia completo",
+      "shore": "Costa: meia jornada",
+      "hours": "Horários típicos 8h30–16h",
+      "groups": "Grupos pequenos",
+      "gear": "Material e licenças incluídos"
+    },
     "about": {
       "storyTitle": "A nossa história",
       "experienceTitle": "O que torna isto diferente",
@@ -45,11 +65,21 @@
         "title": "Conhece os pescadores — pesca de barco",
         "body1": "Cada saída é um dia inteiro no mar, simples e sem preocupações. Inclui uma visita guiada ao porto, tempo com os pescadores locais e pesca com skipper e tripulação experientes.",
         "body2": "Todo o material e as licenças necessárias estão incluídos. Os grupos são pequenos para mais conforto, segurança e um dia mais pessoal.",
-        "body3": "O equipamento de segurança é fornecido para poderes relaxar e pescar ao longo da costa da Ericeira da manhã ao final da tarde."
+        "body3": "O equipamento de segurança é fornecido para poderes relaxar e pescar ao longo da costa da Ericeira da manhã ao final da tarde.",
+        "bullets": [
+          "Dia completo no mar",
+          "Visita ao porto e tempo com as tripulações",
+          "Equipamento de segurança incluído"
+        ]
       },
       "shore": {
         "title": "Pesca de costa",
-        "body": "A nossa pesca de costa é uma meia-manhã ou meio-dia descontraído para toda a gente, incluindo crianças e principiantes. Com um pescador local experiente, pescas na bela costa da Ericeira enquanto aprendes técnicas simples e dicas para espécies locais. Todo o equipamento e licenças estão incluídos. Grupos pequenos e um ambiente familiar tornam isto uma ótima forma de descobrir a pesca, respirar ar do mar e passar um bom momento junto ao oceano."
+        "body": "A nossa pesca de costa é uma meia-manhã ou meio-dia descontraído para toda a gente, incluindo crianças e principiantes. Com um pescador local experiente, pescas na bela costa da Ericeira enquanto aprendes técnicas simples e dicas para espécies locais. Todo o equipamento e licenças estão incluídos. Grupos pequenos e um ambiente familiar tornam isto uma ótima forma de descobrir a pesca, respirar ar do mar e passar um bom momento junto ao oceano.",
+        "bullets": [
+          "Sessões de meia jornada",
+          "Ideal para principiantes e famílias",
+          "Pesca na linha de costa local"
+        ]
       }
     },
     "galleryTeaser": {
@@ -81,6 +111,8 @@
   },
   "Gallery": {
     "title": "Galeria",
+    "openLightbox": "Abrir imagem maior",
+    "closeLightbox": "Fechar",
     "intro": "Momentos de dias de barco, sessões de costa e skippers ao longo da costa da Ericeira.",
     "photosTitle": "Fotos",
     "videosTitle": "Vídeos",
@@ -92,6 +124,11 @@
   },
   "JoinUs": {
     "title": "Junta-te à equipa",
+    "tocLabel": "Nesta página",
+    "tocSchedule": "Horários",
+    "tocIncluded": "O que está incluído",
+    "tocWhatsapp": "WhatsApp",
+    "tocForm": "Formulário",
     "schedule": "As nossas saídas costumam começar por volta das 8h30 e terminar por volta das 16h.",
     "includedTitle": "Incluído",
     "includedItems": [
@@ -112,7 +149,7 @@
     "whatsappLabel": "Enviar mensagem no WhatsApp",
     "community": "Segue-nos e fica perto da comunidade para novidades e datas de saída.",
     "formTitle": "Junta-te pelo formulário",
-    "formIntro": "Alternativamente, podes entrar na lista de espera através do formulário abaixo."
+    "formIntro": "Lista de espera ou dúvida geral — usa o formulário abaixo."
   },
   "ContactPage": {
     "title": "Contacta-nos",

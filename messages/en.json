@@ -4,7 +4,7 @@
     "homeTitle": "Ericeira Fishing — Local boat & shore fishing",
     "homeDescription": "Full-day boat trips and half-day shore fishing with local skippers. Small groups, tackle and licences included.",
     "joinUsTitle": "Join the crew — Ericeira Fishing",
-    "joinUsDescription": "Trip times, what’s included, and join the waiting list for the next spot. WhatsApp or form.",
+    "joinUsDescription": "Trip times, what’s included, WhatsApp, form, and general questions — one place to book or get in touch.",
     "contactTitle": "Join the waiting list — Ericeira Fishing",
     "contactDescription": "Tell us you’d like the next available spot on a trip with Ericeira Fishing.",
     "galleryTitle": "Gallery — Ericeira Fishing",
@@ -14,8 +14,10 @@
     "home": "Home",
     "joinUs": "Join us",
     "gallery": "Gallery",
+    "galleryOnHome": "Photos on home",
     "services": "Services",
     "team": "Team",
+    "primaryNav": "Primary",
     "language": "Language",
     "openMenu": "Open menu",
     "changeLanguage": "Change language",
@@ -23,13 +25,31 @@
     "localeFr": "Français",
     "localePt": "Português"
   },
+  "Footer": {
+    "bookTitle": "Book & contact",
+    "exploreTitle": "Explore",
+    "whatsapp": "WhatsApp",
+    "servicesOnHome": "Services (home)",
+    "teamOnHome": "Team (home)",
+    "copyrightName": "Ericeira Fishing"
+  },
   "Home": {
     "hero": {
       "kicker": "Connect with Ericeira’s roots",
       "title": "And bring dinner home",
-      "learnMore": "Learn more"
+      "learnMore": "Learn more",
+      "bookTrip": "Book a trip",
+      "imageAlt": "Fishing boat along the Ericeira coast"
     },
     "lead": "Full-day boat fishing and relaxed half-day shore sessions with local skippers—small groups, all gear and licences included.",
+    "glance": {
+      "title": "At a glance",
+      "boat": "Boat: full day",
+      "shore": "Shore: half day",
+      "hours": "Typical hours 8:30–16:00",
+      "groups": "Small groups",
+      "gear": "Gear & licences included"
+    },
     "about": {
       "storyTitle": "Our story",
       "experienceTitle": "What makes it different",
@@ -45,11 +65,21 @@
         "title": "Meet the fishermen — boat fishing",
         "body1": "Every trip is a full day on the water, kept simple and worry-free. You get a guided look around the port, time with local fishermen, and fishing with an experienced skipper and crew.",
         "body2": "All tackle and required licences are included. Groups stay small for comfort, safety, and a more personal day at sea.",
-        "body3": "Safety gear is provided so you can relax and fish the Ericeira coast from morning to late afternoon."
+        "body3": "Safety gear is provided so you can relax and fish the Ericeira coast from morning to late afternoon.",
+        "bullets": [
+          "Full day on the water",
+          "Port walk & time with crews",
+          "Safety gear provided"
+        ]
       },
       "shore": {
         "title": "Shore fishing",
-        "body": "Our shore fishing experience is a relaxed half-day for everyone, including children and beginners. With an experienced local fisherman you’ll fish from Ericeira’s beautiful coastline while learning simple techniques and tips for local species. All equipment and required licences are included. Small groups and a friendly atmosphere make it a great way to discover fishing, breathe the sea air, and spend quality time by the ocean."
+        "body": "Our shore fishing experience is a relaxed half-day for everyone, including children and beginners. With an experienced local fisherman you’ll fish from Ericeira’s beautiful coastline while learning simple techniques and tips for local species. All equipment and required licences are included. Small groups and a friendly atmosphere make it a great way to discover fishing, breathe the sea air, and spend quality time by the ocean.",
+        "bullets": [
+          "Half-day sessions",
+          "Great for beginners & families",
+          "Local coastline marks"
+        ]
       }
     },
     "galleryTeaser": {
@@ -81,6 +111,8 @@
   },
   "Gallery": {
     "title": "Gallery",
+    "openLightbox": "Open larger image",
+    "closeLightbox": "Close",
     "intro": "Moments from boat days, shore sessions, and our skippers along the Ericeira coast.",
     "photosTitle": "Photos",
     "videosTitle": "Videos",
@@ -92,6 +124,11 @@
   },
   "JoinUs": {
     "title": "Join the crew",
+    "tocLabel": "On this page",
+    "tocSchedule": "Schedule",
+    "tocIncluded": "What’s included",
+    "tocWhatsapp": "WhatsApp",
+    "tocForm": "Form",
     "schedule": "Our trips usually start around 8:30 and finish around 4 PM.",
     "includedTitle": "Included",
     "includedItems": [
@@ -112,7 +149,7 @@
     "whatsappLabel": "Message us on WhatsApp",
     "community": "Follow us and stay close to the community for news and trip updates.",
     "formTitle": "Join via the form",
-    "formIntro": "Alternatively, you can join the waiting list through the form below."
+    "formIntro": "Join the waiting list or ask a general question — use the form below."
   },
   "ContactPage": {
     "title": "Contact us",

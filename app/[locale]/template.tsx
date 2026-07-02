@@ -1,12 +1,18 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 
 type Props = {
   children: React.ReactNode;
 };
 
 export default function LocaleTemplate({ children }: Props) {
+  const reduceMotion = useReducedMotion();
+
+  if (reduceMotion) {
+    return <div className="flex flex-1 flex-col">{children}</div>;
+  }
+
   return (
     <motion.div
       className="flex flex-1 flex-col"

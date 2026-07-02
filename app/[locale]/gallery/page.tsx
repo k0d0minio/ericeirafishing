@@ -1,6 +1,7 @@
-import Image, { type StaticImageData } from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import type { StaticImageData } from "next/image";
 
+import { GalleryPhotoGrid } from "@/components/gallery-photo-grid";
 import { FadeIn } from "@/components/motion/fade-in";
 import fishesImg from "@/lib/fishes.jpg";
 import joaoImg from "@/lib/joao-juma.jpeg";
@@ -11,13 +12,14 @@ type Props = {
   params: Promise<{ locale: string }>;
 };
 
-const PHOTOS: { src: StaticImageData; altKey: "altTrips" | "altFish" | "altCrew" | "altCaptain" }[] =
-  [
-    { src: mestreAlbano2Img, altKey: "altTrips" },
-    { src: fishesImg, altKey: "altFish" },
-    { src: joaoImg, altKey: "altCrew" },
-    { src: mestreAlbanoImg, altKey: "altCaptain" },
-  ];
+const PHOTO_KEYS = ["altTrips", "altFish", "altCrew", "altCaptain"] as const;
+
+const PHOTO_SRC: StaticImageData[] = [
+  mestreAlbano2Img,
+  fishesImg,
+  joaoImg,
+  mestreAlbanoImg,
+];
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
@@ -33,6 +35,11 @@ export default async function GalleryPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("Gallery");
+
+  const photos = PHOTO_KEYS.map((key, i) => ({
+    src: PHOTO_SRC[i],
+    alt: t(key),
+  }));
 
   return (
     <main className="mx-auto flex w-full max-w-4xl flex-1 flex-col gap-14 px-4 py-12">
@@ -54,21 +61,7 @@ export default async function GalleryPage({ params }: Props) {
             {t("photosTitle")}
           </h2>
         </FadeIn>
-        <div className="grid gap-3 sm:grid-cols-2">
-          {PHOTOS.map((item, index) => (
-            <FadeIn key={item.altKey} delay={index * 0.05}>
-              <div className="bg-muted relative aspect-[4/3] overflow-hidden rounded-xl">
-                <Image
-                  src={item.src}
-                  alt={t(item.altKey)}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 640px) 100vw, 50vw"
-                />
-              </div>
-            </FadeIn>
-          ))}
-        </div>
+        <GalleryPhotoGrid photos={photos} />
       </section>
 
       <section className="space-y-4" aria-labelledby="gallery-videos-heading">

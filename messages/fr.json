@@ -4,7 +4,7 @@
     "homeTitle": "Ericeira Fishing — Pêche en bateau et du bord avec des locaux",
     "homeDescription": "Journées complètes en mer et demi-journées pêche du bord avec skippers locaux. Petits groupes, matériel et licences inclus.",
     "joinUsTitle": "Rejoignez l’équipe — Ericeira Fishing",
-    "joinUsDescription": "Horaires, inclus / non inclus et liste d’attente pour la prochaine place. WhatsApp ou formulaire.",
+    "joinUsDescription": "Horaires, inclus / non inclus, WhatsApp, formulaire et questions — tout pour réserver ou nous écrire.",
     "contactTitle": "Liste d’attente — Ericeira Fishing",
     "contactDescription": "Indiquez que vous souhaitez une place sur la prochaine sortie avec Ericeira Fishing.",
     "galleryTitle": "Galerie — Ericeira Fishing",
@@ -14,8 +14,10 @@
     "home": "Accueil",
     "joinUs": "Nous rejoindre",
     "gallery": "Galerie",
+    "galleryOnHome": "Photos sur l’accueil",
     "services": "Services",
     "team": "Équipe",
+    "primaryNav": "Principal",
     "language": "Langue",
     "openMenu": "Ouvrir le menu",
     "changeLanguage": "Changer de langue",
@@ -23,13 +25,31 @@
     "localeFr": "Français",
     "localePt": "Português"
   },
+  "Footer": {
+    "bookTitle": "Réserver & contact",
+    "exploreTitle": "Explorer",
+    "whatsapp": "WhatsApp",
+    "servicesOnHome": "Services (accueil)",
+    "teamOnHome": "Équipe (accueil)",
+    "copyrightName": "Ericeira Fishing"
+  },
   "Home": {
     "hero": {
       "kicker": "Retrouvez les racines d’Ericeira",
       "title": "Et ramenez le dîner à la maison",
-      "learnMore": "En savoir plus"
+      "learnMore": "En savoir plus",
+      "bookTrip": "Réserver une sortie",
+      "imageAlt": "Bateau de pêche le long de la côte d’Ericeira"
     },
     "lead": "Pêche en bateau à la journée et demi-journées détendues du bord avec skippers locaux—petits groupes, tout le matériel et les licences inclus.",
+    "glance": {
+      "title": "En bref",
+      "boat": "Bateau : journée complète",
+      "shore": "Bord : demi-journée",
+      "hours": "Horaires types 8 h 30–16 h",
+      "groups": "Petits groupes",
+      "gear": "Matériel & licences inclus"
+    },
     "about": {
       "storyTitle": "Notre histoire",
       "experienceTitle": "Ce qui la rend différente",
@@ -45,11 +65,21 @@
         "title": "Rencontrez les pêcheurs — pêche en bateau",
         "body1": "Chaque sortie est une journée en mer, simple et sans souci : visite guidée du port, temps avec les pêcheurs locaux, et pêche avec un skipper et un équipage expérimentés.",
         "body2": "Tout le matériel et les licences requises sont inclus. Les groupes restent petits pour le confort, la sécurité et une expérience plus personnelle.",
-        "body3": "L’équipement de sécurité est fourni : détendez-vous et pêchez le long de la côte d’Ericeira de la matinée à fin d’après-midi."
+        "body3": "L’équipement de sécurité est fourni : détendez-vous et pêchez le long de la côte d’Ericeira de la matinée à fin d’après-midi.",
+        "bullets": [
+          "Journée complète en mer",
+          "Visite du port & temps avec les équipages",
+          "Équipement de sécurité fourni"
+        ]
       },
       "shore": {
         "title": "Pêche du bord",
-        "body": "Notre pêche du bord est une demi-journée détendue pour tous, y compris les enfants et les débutants. Avec un pêcheur local expérimenté, vous pêchez depuis le magnifique littoral d’Ericeira en apprenant des techniques simples et des astuces pour les espèces locales. Matériel et licences inclus. Petits groupes et ambiance chaleureuse : idéal pour découvrir la pêche, respirer l’air marin et passer un bon moment face à l’océan."
+        "body": "Notre pêche du bord est une demi-journée détendue pour tous, y compris les enfants et les débutants. Avec un pêcheur local expérimenté, vous pêchez depuis le magnifique littoral d’Ericeira en apprenant des techniques simples et des astuces pour les espèces locales. Matériel et licences inclus. Petits groupes et ambiance chaleureuse : idéal pour découvrir la pêche, respirer l’air marin et passer un bon moment face à l’océan.",
+        "bullets": [
+          "Sessions demi-journée",
+          "Idéal débutants & familles",
+          "Pêche sur le littoral local"
+        ]
       }
     },
     "galleryTeaser": {
@@ -81,6 +111,8 @@
   },
   "Gallery": {
     "title": "Galerie",
+    "openLightbox": "Agrandir l’image",
+    "closeLightbox": "Fermer",
     "intro": "Instants de journées en mer, sessions du bord et skippers le long de la côte d’Ericeira.",
     "photosTitle": "Photos",
     "videosTitle": "Vidéos",
@@ -92,6 +124,11 @@
   },
   "JoinUs": {
     "title": "Rejoignez l’équipage",
+    "tocLabel": "Sur cette page",
+    "tocSchedule": "Horaires",
+    "tocIncluded": "Inclus / non inclus",
+    "tocWhatsapp": "WhatsApp",
+    "tocForm": "Formulaire",
     "schedule": "Nos sorties commencent en général vers 8 h 30 et se terminent vers 16 h.",
     "includedTitle": "Inclus",
     "includedItems": [
@@ -112,7 +149,7 @@
     "whatsappLabel": "Écrire sur WhatsApp",
     "community": "Suivez-nous pour rester proche de la communauté : actualités et dates de sortie.",
     "formTitle": "S’inscrire via le formulaire",
-    "formIntro": "Vous pouvez aussi rejoindre la liste d’attente via le formulaire ci-dessous."
+    "formIntro": "Liste d’attente ou question générale — utilisez le formulaire ci-dessous."
   },
   "ContactPage": {
     "title": "Nous contacter",

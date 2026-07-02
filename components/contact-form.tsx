@@ -22,8 +22,11 @@ import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
 
 const selectClassName = cn(
-  "h-8 w-full min-w-0 rounded-lg border border-input bg-transparent px-2.5 py-1 text-base transition-colors outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40",
+  "h-10 min-h-10 w-full min-w-0 rounded-lg border border-input bg-transparent px-2.5 py-2 text-base transition-colors outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:h-8 md:min-h-0 md:py-1 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40",
 );
+
+const fieldClassName =
+  "min-h-10 h-10 md:h-8 md:min-h-0";
 
 function buildContactSchema(t: (key: string) => string) {
   return z.object({
@@ -128,6 +131,7 @@ export function ContactForm({ intent = "join" }: ContactFormProps) {
               id="contact-name"
               autoComplete="name"
               aria-invalid={!!form.formState.errors.name}
+              className={fieldClassName}
               {...form.register("name")}
             />
             {form.formState.errors.name ? (
@@ -143,6 +147,7 @@ export function ContactForm({ intent = "join" }: ContactFormProps) {
               type="email"
               autoComplete="email"
               aria-invalid={!!form.formState.errors.email}
+              className={fieldClassName}
               {...form.register("email")}
             />
             {form.formState.errors.email ? (
@@ -177,6 +182,7 @@ export function ContactForm({ intent = "join" }: ContactFormProps) {
               autoComplete="off"
               aria-invalid={!!form.formState.errors.availability}
               placeholder={t("availabilityPlaceholder")}
+              className={fieldClassName}
               {...form.register("availability")}
             />
             {form.formState.errors.availability ? (
